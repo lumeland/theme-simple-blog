@@ -6,7 +6,7 @@ Lume theme to create a simple blog.
 
 ```ts
 import lume from "lume/mod.ts";
-import blog from "https://deno.land/x/lume_theme_simple_blog.ts";
+import blog from "https://deno.land/x/lume_theme_simple_blog/mod.ts";
 
 const site = lume();
 
