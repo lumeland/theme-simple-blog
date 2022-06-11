@@ -1,0 +1,11 @@
+---
+layout: layouts/base.njk
+bodyClass: body-tag
+---
+<header class="page-header">
+  <a href="{{ "~/archive[0].tmpl.js" | url }}">← Back</a>
+  <h1 class="page-title">{{ title }}</h1>
+</header>
+
+{% set postslist = search.pages("'" + tag + "'") %}
+{% include "templates/post-list.njk" %}

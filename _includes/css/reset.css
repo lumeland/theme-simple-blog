@@ -1,0 +1,47 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font: var(--font-ui);
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+main {
+  padding: var(--row-gap-medium) 5vw;
+  max-width: 45em;
+  margin: 0 auto;
+
+  & > :first-child {
+    margin-top: 0;
+  }
+}
+
+a {
+  color: var(--color-link);
+
+  &:hover {
+    text-decoration: none;
+    color: var(--color-link-hover);
+  }
+}
+
+table {
+  margin: 1em 0;
+
+  & td,
+  & th {
+    padding-right: 1em;
+  }
+}
+
+pre,
+code {
+  font: var(--font-code);
+}
+
+hr {
+  border: 0;
+  border-top: solid 1px var(--color-line);
+  margin: var(--row-gap-medium) 0;
+}

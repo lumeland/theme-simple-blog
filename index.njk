@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+bodyClass: body-home
+---
+
+{% set postslist = search.pages("type=posts", "date=desc", 3) %}
+
+<section class="postList">
+  {% asyncEach post in postslist %}
+  <article class="post">
+    <header class="post-header">
+      <h2 class="post-title">
+        <a href="{{ post.data.url }}" {% if post.data.url == url %} aria-current="page"{% endif %}>
+          {{ post.data.title or post.data.url }}</h2>
+        </a>
+      </h2>
+
+      {% set date = post.data.date %}
+      {% set tags = post.data.tags %}
+      {% include "templates/post-details.njk" %}
+    </header>
+
+    <div class="post-excerpt">
+      {{ post.data.excerpt | md | safe }}
+    </div>
+  </article>
+{% endeach %}
+</section>
+
+<hr>
+
+<p>More posts can be found in <a href="/archive/">the archive</a>.</p>

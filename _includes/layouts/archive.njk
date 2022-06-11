@@ -1,0 +1,44 @@
+---
+layout: layouts/base.njk
+bodyClass: body-tag
+---
+<header class="page-header">
+  <h1 class="page-title">{{ title }}</h1>
+</header>
+
+{% if pagination.page == 1 %}
+<nav class="page-navigation">
+  <h2>Tags:</h2>
+  
+  <ul class="page-navigation-tags">
+  {% for page in search.pages("type=tag", "tag") %}
+    <li><a href="{{ page.data.url }}" class="tag">{{ page.data.tag }}</a></li>
+  {% endfor %}
+  </ul>
+</nav>
+{% endif %}
+
+{% set postslist = results %}
+{% include "templates/post-list.njk" %}
+
+{% if not pagination.totalPages == 1 %}
+<nav class="page-pagination">
+  <ul>
+    {%- if pagination.previous %}
+    <li>
+      <a href="{{ pagination.previous }}" rel="prev">← Previous</a>
+    </li>
+    {% endif %}
+
+    <li>
+      Page {{ pagination.page }}
+    </li>
+
+    {%- if pagination.next %}
+    <li>
+      <a href="{{ pagination.next }}" rel="next">Next →</a>
+    </li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %}

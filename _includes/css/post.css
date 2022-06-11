@@ -1,0 +1,15 @@
+.post-header {
+  margin-bottom: var(--row-gap-medium);
+}
+.post-title {
+  font: var(--font-display);
+  letter-spacing: var(--font-display-spacing);
+  margin: 0 0 0.25em;
+}
+.post-details {
+  font: var(--font-small);
+}
+.post-excerpt,
+.post-body {
+  font: var(--font-body);
+}
