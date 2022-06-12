@@ -9,6 +9,7 @@
 
     {% set date = post.data.date %}
     {% set tags = post.data.tags %}
+    {% set author = post.data.author %}
     {% include "./post-details.njk" %}
   </li>
 {% endeach %}

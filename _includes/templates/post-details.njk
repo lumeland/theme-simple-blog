@@ -1,13 +1,24 @@
 <div class="post-details">
-  <time class="postList-date" datetime="{{ date | date('DATETIME') }}">
-    {{ date | date('HUMAN_DATE') }}
-  </time>
-
-  {% for tag in tags %}
-    {% set page = search.page("type=tag tag='" + tag + "'") %}
-
-    {% if page %}
-      | <a href="{{ page.data.url  }}" class="tag">{{ tag }}</a>
+  <p>
+    {% if author %}
+      {% set page = search.page("type=author author='" + author + "'") %}
+      {% if page %}
+        By <a href="{{ page.data.url  }}">{{ author }}</a> | 
+      {% endif %}
+    {% else %}
+    By {{ author or site.author.name }} | 
     {% endif %}
-  {% endfor %}
+
+    <time datetime="{{ date | date('DATETIME') }}">
+      {{ date | date('HUMAN_DATE') }}
+    </time>
+
+    {% for tag in tags %}
+      {% set page = search.page("type=tag tag='" + tag + "'") %}
+
+      {% if page %}
+        | <a href="{{ page.data.url  }}">{{ tag }}</a>
+      {% endif %}
+    {% endfor %}
+  </p>
 </div>

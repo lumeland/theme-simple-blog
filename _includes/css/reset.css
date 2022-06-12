@@ -3,7 +3,7 @@ body {
   padding: 0;
   margin: 0;
   font: var(--font-ui);
-  color: var(--color-text);
+  color: var(--color-base);
   background-color: var(--color-background);
 }
 

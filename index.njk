@@ -3,7 +3,7 @@ layout: layouts/base.njk
 bodyClass: body-home
 ---
 
-{% set postslist = search.pages("type=posts", "date=desc", 3) %}
+{% set postslist = search.pages("type=post", "date=desc", 3) %}
 
 <section class="postList">
   {% asyncEach post in postslist %}
@@ -17,6 +17,7 @@ bodyClass: body-home
 
       {% set date = post.data.date %}
       {% set tags = post.data.tags %}
+      {% set author = post.data.author %}
       {% include "templates/post-details.njk" %}
     </header>
 

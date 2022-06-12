@@ -1,7 +1,8 @@
 site:
   title: Your Blog Name
   description: I am writing about my experiences as a naval navel-gazer.
+  lang: en
   author:
-    name: Your Name Here,
+    name: Your Name Here
     email: youremailaddress@example.com,
     url: https://example.com/about-me/

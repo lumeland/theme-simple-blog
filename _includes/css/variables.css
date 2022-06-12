@@ -1,11 +1,12 @@
 :root {
   /* Colors */
-  --color-primary: #c04;
-  --color-text: #0d1117;
-  --color-link: #324c72;
-  --color-link-hover: #5c7aa5;
-  --color-line: #e6e6e6;
-  --color-background: #fff;
+  --color-base: hsl(220, 30%, 10%);
+  --color-text: hsl(220, 30%, 20%);
+  --color-dim: hsl(220, 30%, 40%);
+  --color-link: hsl(220, 30%, 10%);
+  --color-link-hover: hsl(220, 30%, 40%);
+  --color-line: hsl(220, 30%, 90%);
+  --color-background: hsl(220, 30%, 100%);
 
   /* Fonts */
   --font-family-code: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;

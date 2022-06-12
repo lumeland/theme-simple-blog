@@ -11,13 +11,12 @@ import type { Page, Site } from "lume/core.ts";
 export default function () {
   return (site: Site) => {
     // Configure the site
-    site.copy("img")
-      .use(postcss())
+    site.use(postcss())
       .use(terser())
       .use(date())
       .use(codeHighlight())
       .use(basePath())
-      .use(slugifyUrls({ alphanumeric: false }))
+      .use(slugifyUrls())
       .use(resolveUrls())
       .preprocess([".md"], (page: Page) => {
         page.data.excerpt ??= page.data.content.split("<!--more-->")[0];
@@ -31,16 +30,18 @@ export default function () {
       "_includes/css/post.css",
       "_includes/css/reset.css",
       "_includes/css/variables.css",
+      "_includes/layouts/archive_result.njk",
       "_includes/layouts/archive.njk",
       "_includes/layouts/base.njk",
+      "_includes/layouts/page.njk",
       "_includes/layouts/post.njk",
-      "_includes/layouts/tag.njk",
       "_includes/templates/post-details.njk",
       "_includes/templates/post-list.njk",
       "posts/_data.yml",
       "_data.yml",
       "404.md",
       "about.md",
+      "archive_result.tmpl.js",
       "archive.tmpl.js",
       "feed.tmpl.js",
       "feed.xml.njk",
@@ -48,7 +49,6 @@ export default function () {
       "robots.txt.njk",
       "sitemap.xml.njk",
       "styles.css",
-      "tag.tmpl.js",
     ];
 
     const base = new URL("./", import.meta.url);

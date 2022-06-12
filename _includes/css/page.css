@@ -1,5 +1,10 @@
 .page-header {
   margin-bottom: var(--row-gap-medium);
+
+  & p:first-child {
+    margin-top: 0;
+    margin-bottom: .5em;
+  }
 }
 .page-title {
   font: var(--font-display);

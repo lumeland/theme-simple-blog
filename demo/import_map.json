@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@a375e3eead6f25a9795fea128898be4de70d92b3/"
+  }
+}
