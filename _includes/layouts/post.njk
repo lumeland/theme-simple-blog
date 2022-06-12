@@ -14,21 +14,25 @@ bodyClass: body-post
   </div>
 </article>
 
-<hr>
-
-<nav class="post-navigation">
+<nav class="page-pagination">
   <ul>
-    {%- set previousPost = search.previousPage(url, "type=posts") %}
+    {%- set previousPost = search.previousPage(url, "type=post") %}
     {%- if previousPost %}
-    <li>
-      ← Previous: <a href="{{ previousPost.data.url }}" rel="prev">{{ previousPost.data.title }}</a>
+    <li class="page-pagination-prev">
+      <a href="{{ previousPost.data.url }}" rel="prev">
+        ← Previous post:
+        <strong>{{ previousPost.data.title }}</strong>
+      </a>
     </li>
     {% endif %}
 
-    {%- set nextPost = search.nextPage(url, "type=posts") %}
+    {%- set nextPost = search.nextPage(url, "type=post") %}
     {%- if nextPost %}
-    <li>
-      <strong>Next: <a href="{{ nextPost.data.url }}" rel="next">{{ nextPost.data.title }}</a> →</strong>
+    <li class="page-pagination-next">
+      <a href="{{ nextPost.data.url }}" rel="next">
+        Next post →:
+        <strong>{{ nextPost.data.title }}</strong>
+      </a>
     </li>
     {% endif %}
   </ul>

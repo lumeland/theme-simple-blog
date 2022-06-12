@@ -37,10 +37,25 @@
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    column-gap: 2rem;
+    justify-content: space-between;
   }
 
-  & li {
-    padding: 1em;
+  & a {
+    display: block;
+    text-decoration: none;
+    color: var(--color-dim);
+
+    &:hover strong {
+      text-decoration: underline;
+    }
   }
+
+  & strong {
+    color: var(--color-base);
+    display: block;
+  }
+}
+.page-pagination-next {
+  margin-left: auto;
 }
