@@ -9,16 +9,17 @@
 	<updated>{{ lastPage.data.date | date("ATOM") }}</updated>
 	<id>{{ "/" | url(true) }}</id>
 	<author>
-		<name>{{ site.author.name }}</name>
-		<email>{{ site.author.email }}</email>
+		<name>{{ author.name }}</name>
+		<email>{{ author.email }}</email>
 	</author>
-	{%- for post in search.pages("type=posts", "date=desc", 10) %}
+	{%- for post in search.pages("type=post", "date=desc", 10) %}
 	<entry>
 		<title>{{ post.data.title }}</title>
 		<link href="{{ post.data.url | url(true) }}"/>
 		<updated>{{ post.data.date | date("ATOM") }}</updated>
 		<id>{{ post.data.url | url(true) }}</id>
-		<content type="html">{{ post.data.content | md | htmlUrl(true) }}</content>
+		{% set content = post.data.excerpt or post.data.content %}
+		<content type="html">{{ content | md | htmlUrl(true) }}</content>
 	</entry>
 	{%- endfor %}
 </feed>

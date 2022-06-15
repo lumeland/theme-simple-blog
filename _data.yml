@@ -7,5 +7,8 @@ author:
 metas:
   site: Blog name
   description: General description of the blog
+  twitter: "@username"
   lang: en
-  twitter: "@twitter"
+
+mergedKeys:
+  metas: object

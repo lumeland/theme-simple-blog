@@ -23,10 +23,6 @@ export default function () {
       .copy("fonts")
       .preprocess([".md"], (page: Page) => {
         page.data.excerpt ??= page.data.content.split("<!--more-->")[0];
-      })
-      .preprocess([".md"], (page: Page) => {
-        page.data.metas.title ??= page.data.title;
-        page.data.metas.description ??= page.data.description;
       });
 
     // Add remote files

@@ -21,4 +21,4 @@ export default site;
 
 ## Customize
 
-- Copy the _data.yml file in your blog root folder and edit with your data.
+- Copy the `_data.yml` file in your blog root folder and edit with your blog data.

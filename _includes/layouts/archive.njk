@@ -4,6 +4,10 @@ bodyClass: body-tag
 ---
 <header class="page-header">
   <h1 class="page-title">{{ title }}</h1>
+
+  <p>
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="13" r="2" fill="currentColor"/><path d="M14 13C14 6.925 9.075 2 3 2M9 13a6 6 0 0 0-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> RSS:
+    <a href="/feed.xml">Atom</a>, <a href="/feed.json">JSON</a></p>
 </header>
 
 {% if pagination.page == 1 %}
