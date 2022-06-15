@@ -4,7 +4,7 @@
   column-gap: 1rem;
   row-gap: 1rem;
   justify-content: space-between;
-  padding: min(2rem, 5vh) min(5vw, 5rem);
+  padding: 2rem min(5vw, 5rem);
 
   & a {
     &:not(:hover) {

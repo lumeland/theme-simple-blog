@@ -38,6 +38,7 @@ table {
 pre,
 code {
   font: var(--font-code);
+  letter-spacing: 0;
 }
 
 hr {

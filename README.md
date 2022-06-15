@@ -2,6 +2,10 @@
 
 Lume theme to create a simple blog.
 
+- It supports tags and post authors.
+- RSS (Atom and JSON).
+- Sitemap and SEO features.
+
 ## Install
 
 ```ts
@@ -14,3 +18,7 @@ site.use(blog());
 
 export default site;
 ```
+
+## Customize
+
+- Copy the _data.yml file in your blog root folder and edit with your data.

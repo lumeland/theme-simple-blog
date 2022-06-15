@@ -5,6 +5,7 @@ import codeHighlight from "lume/plugins/code_highlight.ts";
 import basePath from "lume/plugins/base_path.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
+import metas from "lume/plugins/metas.ts";
 
 import type { Page, Site } from "lume/core.ts";
 
@@ -12,18 +13,25 @@ export default function () {
   return (site: Site) => {
     // Configure the site
     site.use(postcss())
-      .use(terser())
-      .use(date())
-      .use(codeHighlight())
       .use(basePath())
-      .use(slugifyUrls())
+      .use(codeHighlight())
+      .use(date())
+      .use(metas())
       .use(resolveUrls())
+      .use(slugifyUrls())
+      .use(terser())
+      .copy("fonts")
       .preprocess([".md"], (page: Page) => {
         page.data.excerpt ??= page.data.content.split("<!--more-->")[0];
+      })
+      .preprocess([".md"], (page: Page) => {
+        page.data.metas.title ??= page.data.title;
+        page.data.metas.description ??= page.data.description;
       });
 
     // Add remote files
     const files = [
+      "_includes/css/fonts.css",
       "_includes/css/navbar.css",
       "_includes/css/page.css",
       "_includes/css/post-list.css",
@@ -37,6 +45,8 @@ export default function () {
       "_includes/layouts/post.njk",
       "_includes/templates/post-details.njk",
       "_includes/templates/post-list.njk",
+      "fonts/inter.woff2",
+      "fonts/inter-italic.woff2",
       "posts/_data.yml",
       "_data.yml",
       "404.md",

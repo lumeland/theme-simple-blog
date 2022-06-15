@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>{{ site.title }}</title>
-	<subtitle>{{ site.description }}</subtitle>
+	<title>{{ metas.site }}</title>
+	<subtitle>{{ metas.description }}</subtitle>
 	<link href="{{ url | url(true) }}" rel="self"/>
 	<link href="{{ "/" | url(true) }}"/>
 	{% set lastPage = search.pages() | last %}

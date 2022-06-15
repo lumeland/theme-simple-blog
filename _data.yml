@@ -1,8 +1,11 @@
-site:
-  title: Your Blog Name
-  description: I am writing about my experiences as a naval navel-gazer.
+author:
+  name: Your Name Here
+  email: youremailaddress@example.com,
+  url: https://example.com/about-me/
+
+# Metas plugin https://lume.land/plugins/metas/#description
+metas:
+  site: Blog name
+  description: General description of the blog
   lang: en
-  author:
-    name: Your Name Here
-    email: youremailaddress@example.com,
-    url: https://example.com/about-me/
+  twitter: "@twitter"

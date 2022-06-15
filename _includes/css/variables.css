@@ -1,12 +1,12 @@
 :root {
   /* Colors */
-  --color-base: hsl(220, 30%, 10%);
-  --color-text: hsl(220, 30%, 20%);
-  --color-dim: hsl(220, 30%, 40%);
-  --color-link: hsl(220, 30%, 10%);
-  --color-link-hover: hsl(220, 30%, 40%);
-  --color-line: hsl(220, 30%, 90%);
-  --color-background: hsl(220, 30%, 100%);
+  --color-base: hsl(220, 20%, 10%);
+  --color-text: hsl(220, 20%, 20%);
+  --color-dim: hsl(220, 20%, 40%);
+  --color-link: hsl(220, 20%, 10%);
+  --color-link-hover: hsl(220, 20%, 40%);
+  --color-line: hsl(220, 20%, 90%);
+  --color-background: hsl(220, 20%, 100%);
 
   /* Fonts */
   --font-family-code: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
@@ -19,10 +19,32 @@
   --font-title-spacing: -0.015em;
   --font-body: clamp(1rem, 5vw, 1.2rem)/1.5 var(--font-family-ui);
   --font-body-bold: bold var(--font-body);
+  --font-body-spacing: 0;
   --font-ui: 1rem/1.4 var(--font-family-ui);
   --font-small: 0.85rem/1.4 var(--font-family-ui);
 
   /* Space */
   --row-gap-small: 2.5rem;
-  --row-gap-medium: clamp(2rem, 5vh, 5rem);
+  --row-gap-medium: 5rem;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    --font-family-ui: Inter, -apple-system, system-ui, sans-serif;
+    --font-display-spacing: -0.035em;
+    --font-title-spacing: -0.025em;
+    --font-body-spacing: -0.015em;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-base: hsl(220, 20%, 100%);
+    --color-text: hsl(220, 20%, 80%);
+    --color-dim: hsl(220, 20%, 60%);
+    --color-link: hsl(220, 20%, 100%);
+    --color-link-hover: hsl(220, 20%, 70%);
+    --color-line: hsl(220, 20%, 20%);
+    --color-background: hsl(220, 20%, 10%);
+  }
 }

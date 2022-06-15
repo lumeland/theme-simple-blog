@@ -25,6 +25,7 @@
 
   & h2 {
     font: var(--font-body-bold);
+    letter-spacing: var(--font-body-spacing);
     margin: .3em 0;
   }
 }

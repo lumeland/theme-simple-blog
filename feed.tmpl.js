@@ -1,15 +1,18 @@
 export const url = "/feed.json";
 
-export default function ({ site, search }, { md, url, date, htmlUrl }) {
+export default function (
+  { metas, author, search },
+  { md, url, date, htmlUrl },
+) {
   const feed = {
     version: "https://jsonfeed.org/version/1",
-    title: site.title,
+    title: metas.site,
     home_page_url: url("", true),
     feed_url: url("feed.json", true),
-    description: site.description,
+    description: metas.description,
     author: {
-      name: site.author.name,
-      url: site.author.url,
+      name: author.name,
+      url: author.url,
     },
     items: [],
   };

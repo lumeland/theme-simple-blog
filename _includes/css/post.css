@@ -20,9 +20,11 @@
 .post-excerpt,
 .post-body {
   font: var(--font-body);
+  letter-spacing: var(--font-body-spacing);
   color: var(--color-text);
 
   & h2, & h3, & h4, & h5, & h6 {
-    color: var(--color-text);
+    color: var(--color-base);
+    margin: 1.5em 0 .5em 0;
   }
 }
