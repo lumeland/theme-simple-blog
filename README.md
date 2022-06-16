@@ -19,6 +19,9 @@ site.use(blog());
 export default site;
 ```
 
-## Customize
+## Usage
 
-- Copy the `_data.yml` file in your blog root folder and edit with your blog data.
+- Copy the `_data.yml` file in your blog root folder and edit with your blog
+  data.
+- Save your posts in the `posts` folder. For example: `posts/my-first-posts.md`.
+- See [lume.land](https://lume.land) for more info.
