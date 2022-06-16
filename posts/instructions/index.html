@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to install this theme</title>
+    <link rel="stylesheet" href="/theme-simple-blog/styles.css">
+    <link rel="alternate" href="/theme-simple-blog/feed.xml" type="application/atom+xml" title="Blog name">
+    <link rel="alternate" href="/theme-simple-blog/feed.json" type="application/json" title="Blog name">
+  <meta property="og:type" content="website">
+<meta property="og:site_name" content="Blog name">
+<meta property="og:locale" content="en">
+<meta property="og:description" content="General description of the blog">
+<meta property="og:url" content="https://lumeland.github.io/theme-simple-blog/posts/instructions/">
+<meta name="twitter:description" content="General description of the blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@username">
+<meta itemprop="description" content="General description of the blog">
+<meta name="description" content="General description of the blog">
+</head>
+  <body>
+    <nav class="navbar">
+      <a href="/theme-simple-blog/" class="navbar-home">
+        <strong>Blog name</strong>
+      </a>
+
+      <ul class="navbar-links">
+        <li>
+          <a href="/theme-simple-blog/archive/">
+            Archive
+          </a>
+        </li>
+        <li>
+          <a href="/theme-simple-blog/about/">
+            About Me
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="body-post">
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">How to install this theme</h1>
+
+    <div class="post-details">
+  <p>
+    
+      
+      
+        By <a href="/theme-simple-blog/author/oscar-otero/">Óscar Otero</a> | 
+      
+    
+
+    <time datetime="2022-06-12 00:00:00">
+      June 12th, 2022
+    </time>
+
+    
+      
+
+      
+        | <a href="/theme-simple-blog/archive/instructions/">Instructions</a>
+      
+    
+  </p>
+</div>
+
+  </header>
+
+  <div class="post-body">
+    <p><strong>Simple blog</strong> is a clean and minimal blog theme for Lume, with support for
+tags and authors. It allows to build your own blog <strong>in seconds</strong>, providing
+also support for RSS.</p>
+<!--more-->
+<p>To use it, just import the theme in your <code>_config.ts</code> file:</p>
+<pre><code class="language-js hljs language-javascript"><span class="hljs-keyword">import</span> lume <span class="hljs-keyword">from</span> <span class="hljs-string">"lume"</span>;
+<span class="hljs-keyword">import</span> blog <span class="hljs-keyword">from</span> <span class="hljs-string">"https://deno.land/x/lume_theme_simple_blog/mod.ts"</span>;
+
+<span class="hljs-keyword">const</span> site = <span class="hljs-title function_">lume</span>();
+site.<span class="hljs-title function_">use</span>(<span class="hljs-title function_">blog</span>());
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> site;
+</code></pre>
+<h2>Customization</h2>
+<p>You can customize the blog creating the remote files in your local folder. For
+example, to change some style variables, create the file
+<code>_includes/css/variables.css</code> file in your local folder and edit the variables
+values:</p>
+<pre><code class="language-css hljs"><span class="hljs-selector-pseudo">:root</span> {
+  <span class="hljs-comment">/* Colors */</span>
+  <span class="hljs-attr">--color-base</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">220</span>, <span class="hljs-number">30%</span>, <span class="hljs-number">10%</span>);
+  <span class="hljs-attr">--color-text</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">220</span>, <span class="hljs-number">30%</span>, <span class="hljs-number">20%</span>);
+  <span class="hljs-attr">--color-dim</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">220</span>, <span class="hljs-number">30%</span>, <span class="hljs-number">40%</span>);
+  <span class="hljs-attr">--color-link</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">220</span>, <span class="hljs-number">30%</span>, <span class="hljs-number">10%</span>);
+  <span class="hljs-attr">--color-link-hover</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">220</span>, <span class="hljs-number">30%</span>, <span class="hljs-number">40%</span>);
+  <span class="hljs-attr">--color-line</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">220</span>, <span class="hljs-number">30%</span>, <span class="hljs-number">90%</span>);
+  <span class="hljs-attr">--color-background</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">220</span>, <span class="hljs-number">30%</span>, <span class="hljs-number">100%</span>);
+
+  <span class="hljs-comment">/* Fonts */</span>
+  <span class="hljs-attr">--font-family-code</span>: Consolas, Menlo, Monaco, <span class="hljs-string">"Andale Mono WT"</span>, <span class="hljs-string">"Andale Mono"</span>, <span class="hljs-string">"Lucida Console"</span>, <span class="hljs-string">"Lucida Sans Typewriter"</span>, <span class="hljs-string">"DejaVu Sans Mono"</span>, <span class="hljs-string">"Bitstream Vera Sans Mono"</span>, <span class="hljs-string">"Liberation Mono"</span>, <span class="hljs-string">"Nimbus Mono L"</span>, <span class="hljs-string">"Courier New"</span>, Courier, monospace;
+  <span class="hljs-attr">--font-family-ui</span>: -apple-system, system-ui, sans-serif;
+
+  <span class="hljs-attr">--font-code</span>: <span class="hljs-number">1rem</span>/<span class="hljs-number">1.5</span> <span class="hljs-built_in">var</span>(--font-family-code);
+  <span class="hljs-attr">--font-display</span>: bold <span class="hljs-built_in">clamp</span>(<span class="hljs-number">2rem</span>, <span class="hljs-number">10vw</span>, <span class="hljs-number">4rem</span>)/<span class="hljs-number">1</span> <span class="hljs-built_in">var</span>(--font-family-ui);
+  <span class="hljs-attr">--font-display-spacing</span>: -<span class="hljs-number">0.02em</span>;
+  <span class="hljs-attr">--font-title</span>: bold <span class="hljs-built_in">clamp</span>(<span class="hljs-number">1.5rem</span>, <span class="hljs-number">8vw</span>, <span class="hljs-number">2rem</span>)/<span class="hljs-number">1.2</span> <span class="hljs-built_in">var</span>(--font-family-ui);
+  <span class="hljs-attr">--font-title-spacing</span>: -<span class="hljs-number">0.015em</span>;
+  <span class="hljs-attr">--font-body</span>: <span class="hljs-built_in">clamp</span>(<span class="hljs-number">1rem</span>, <span class="hljs-number">5vw</span>, <span class="hljs-number">1.2rem</span>)/<span class="hljs-number">1.5</span> <span class="hljs-built_in">var</span>(--font-family-ui);
+  <span class="hljs-attr">--font-body-bold</span>: bold <span class="hljs-built_in">var</span>(--font-body);
+  <span class="hljs-attr">--font-ui</span>: <span class="hljs-number">1rem</span>/<span class="hljs-number">1.4</span> <span class="hljs-built_in">var</span>(--font-family-ui);
+  <span class="hljs-attr">--font-small</span>: <span class="hljs-number">0.85rem</span>/<span class="hljs-number">1.4</span> <span class="hljs-built_in">var</span>(--font-family-ui);
+
+  <span class="hljs-comment">/* Space */</span>
+  <span class="hljs-attr">--row-gap-small</span>: <span class="hljs-number">2.5rem</span>;
+  <span class="hljs-attr">--row-gap-medium</span>: <span class="hljs-built_in">clamp</span>(<span class="hljs-number">2rem</span>, <span class="hljs-number">5vh</span>, <span class="hljs-number">5rem</span>);
+}
+</code></pre>
+
+  </div>
+</article>
+
+<nav class="page-pagination">
+  <ul>
+    <li class="page-pagination-prev">
+      <a href="/theme-simple-blog/posts/firstpost/" rel="prev">
+        ← Previous post:
+        <strong>This is my first post.</strong>
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+    </main>
+
+    <!-- Current page: /posts/instructions/ -->
+  
+
+</body></html>

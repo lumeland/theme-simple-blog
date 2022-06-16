@@ -1,0 +1,27 @@
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "Blog name",
+  "home_page_url": "https://lumeland.github.io/theme-simple-blog",
+  "feed_url": "https://lumeland.github.io/theme-simple-blog/feed.json",
+  "description": "General description of the blog",
+  "author": {
+    "name": "Your Name Here",
+    "url": "https://example.com/about-me/"
+  },
+  "items": [
+    {
+      "id": "https://lumeland.github.io/theme-simple-blog/posts/instructions/",
+      "url": "https://lumeland.github.io/theme-simple-blog/posts/instructions/",
+      "title": "How to install this theme",
+      "content_html": "<p><strong>Simple blog</strong> is a clean and minimal blog theme for Lume, with support for\ntags and authors. It allows to build your own blog <strong>in seconds</strong>, providing\nalso support for RSS.</p>",
+      "date_published": "2022-06-12T00:00:00Z"
+    },
+    {
+      "id": "https://lumeland.github.io/theme-simple-blog/posts/firstpost/",
+      "url": "https://lumeland.github.io/theme-simple-blog/posts/firstpost/",
+      "title": "This is my first post.",
+      "content_html": "<p>Leverage agile frameworks to provide a robust synopsis for high level overviews.\nIterative approaches to corporate strategy foster collaborative thinking to\nfurther the overall value proposition. Organically grow the holistic world view\nof disruptive innovation via workplace diversity and empowerment.</p>",
+      "date_published": "2018-08-23T00:00:00Z"
+    }
+  ]
+}
