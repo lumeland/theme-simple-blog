@@ -25,7 +25,7 @@ bodyClass: body-tag
 {% set postslist = results %}
 {% include "templates/post-list.njk" %}
 
-{% if not pagination.totalPages == 1 %}
+{% if pagination.totalPages != 1 %}
 <nav class="page-pagination">
   <ul>
     {%- if pagination.previous %}
