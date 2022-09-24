@@ -1,6 +1,6 @@
 ---
 title: This is my first post.
-date: 2018-08-23
+date: 2018-08-23T10:10:10
 author: Óscar Otero
 tags:
   - first post
