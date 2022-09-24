@@ -23,6 +23,7 @@ export default function () {
       .use(pagefind())
       .use(terser())
       .copy("fonts")
+      .copy("favicon.png")
       .preprocess([".md"], (page: Page) => {
         page.data.excerpt ??= page.data.content.split("<!--more-->")[0];
       });
@@ -58,12 +59,11 @@ export default function () {
       "robots.txt.njk",
       "sitemap.xml.njk",
       "styles.css",
+      "favicon.png",
     ];
 
-    const base = new URL("./", import.meta.url);
-
     for (const file of files) {
-      site.remoteFile(file, new URL(file, base).href);
+      site.remoteFile(file, import.meta.resolve(`./src/${file}`));
     }
 
     // Highlight.js stylesheet

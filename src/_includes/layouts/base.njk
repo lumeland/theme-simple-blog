@@ -4,10 +4,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title or metas.title }}</title>
+    <title>{{ title or metas.title }} - {{ metas.site }}</title>
     <link rel="stylesheet" href="/styles.css">
     <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ metas.site }}">
     <link rel="alternate" href="/feed.json" type="application/json" title="{{ metas.site }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
   </head>
   <body>
     <nav class="navbar">
