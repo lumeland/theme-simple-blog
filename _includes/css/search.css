@@ -1,0 +1,30 @@
+.search {
+  margin-top: var(--row-gap-xsmall);
+
+  --pagefind-ui-scale: .8;
+  --pagefind-ui-primary: var(--color-text);
+  --pagefind-ui-text: var(--color-text);
+  --pagefind-ui-background: var(--color-background);
+  --pagefind-ui-border: var(--color-line);
+  --pagefind-ui-tag: #eeeeee;
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 8px;
+  --pagefind-ui-image-border-radius: 8px;
+  --pagefind-ui-image-box-ratio: 3 / 2;
+  --pagefind-ui-font: var(--font-family-ui);
+
+  /* Pagefind tweaks */
+  & .pagefind-ui__search-input {
+    font-weight: normal;
+
+    &::placeholder {
+      opacity: 1;
+      color: var(--color-dim);
+    }
+
+    &:focus {
+      box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+      border-color: var(--color-dim);
+    }
+  }
+}

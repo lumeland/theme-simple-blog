@@ -24,6 +24,7 @@
   --font-small: 0.85rem/1.4 var(--font-family-ui);
 
   /* Space */
+  --row-gap-xsmall: 1rem;
   --row-gap-small: 2.5rem;
   --row-gap-medium: 5rem;
 }

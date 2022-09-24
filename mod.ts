@@ -6,6 +6,7 @@ import basePath from "lume/plugins/base_path.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
 import metas from "lume/plugins/metas.ts";
+import pagefind from "https://raw.githubusercontent.com/lumeland/lume/master/plugins/pagefind.ts";
 
 import type { Page, Site } from "lume/core.ts";
 
@@ -19,6 +20,7 @@ export default function () {
       .use(metas())
       .use(resolveUrls())
       .use(slugifyUrls())
+      .use(pagefind())
       .use(terser())
       .copy("fonts")
       .preprocess([".md"], (page: Page) => {
@@ -34,6 +36,7 @@ export default function () {
       "_includes/css/post.css",
       "_includes/css/reset.css",
       "_includes/css/variables.css",
+      "_includes/css/search.css",
       "_includes/layouts/archive_result.njk",
       "_includes/layouts/archive.njk",
       "_includes/layouts/base.njk",

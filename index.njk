@@ -5,6 +5,13 @@ bodyClass: body-home
 
 {% set postslist = search.pages("type=post", "date=desc", 3) %}
 
+<header class="page-header">
+  <h1 class="page-title">Hello, I'm Oscar and this is my blog</h1>
+
+  <div class="search" id="search"></div>
+</header>
+
+
 <section class="postList">
   {% asyncEach post in postslist %}
   <article class="post">
