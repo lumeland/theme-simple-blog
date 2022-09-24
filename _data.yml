@@ -3,6 +3,9 @@ author:
   email: youremailaddress@example.com,
   url: https://example.com/about-me/
 
+home:
+  welcome: Hello, I am a person that writes stuff.
+
 # Metas plugin https://lume.land/plugins/metas/#description
 metas:
   site: Blog name

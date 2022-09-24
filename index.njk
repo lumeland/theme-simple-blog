@@ -6,7 +6,7 @@ bodyClass: body-home
 {% set postslist = search.pages("type=post", "date=desc", 3) %}
 
 <header class="page-header">
-  <h1 class="page-title">Hello, I'm Oscar and this is my blog</h1>
+  <h1 class="page-title">{{ home.welcome }}</h1>
 
   <div class="search" id="search"></div>
 </header>
