@@ -3,7 +3,7 @@
     {% if author %}
       {% set page = search.page("type=author author='" + author + "'") %}
       {% if page %}
-        By <a href="{{ page.data.url  }}">{{ author }}</a> | 
+        By <a data-pagefind-filter="author" href="{{ page.data.url }}">{{ author }}</a> | 
       {% endif %}
     {% else %}
     By {{ author or site.author.name }} | 
@@ -17,7 +17,7 @@
       {% set page = search.page("type=tag tag='" + tag + "'") %}
 
       {% if page %}
-        | <a href="{{ page.data.url  }}">{{ tag }}</a>
+        | <a data-pagefind-filter="filter" href="{{ page.data.url }}">{{ tag }}</a>
       {% endif %}
     {% endfor %}
   </p>

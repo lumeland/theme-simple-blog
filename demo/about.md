@@ -6,4 +6,4 @@ menu:
   order: 2
 ---
 
-I am a person that writes stuff.
+This is an example of an about me page.
