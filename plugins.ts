@@ -6,7 +6,7 @@ import basePath from "lume/plugins/base_path.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
 import metas from "lume/plugins/metas.ts";
-import pagefind from "https://raw.githubusercontent.com/lumeland/lume/master/plugins/pagefind.ts";
+import pagefind from "lume/plugins/pagefind.ts";
 
 import type { Page, Site } from "lume/core.ts";
 
