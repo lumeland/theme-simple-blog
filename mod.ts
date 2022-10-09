@@ -35,8 +35,6 @@ export default function () {
       "feed.tmpl.js",
       "feed.xml.njk",
       "index.njk",
-      "robots.txt.njk",
-      "sitemap.xml.njk",
       "styles.css",
       "favicon.png",
     ];
