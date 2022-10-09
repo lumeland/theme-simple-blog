@@ -8,10 +8,6 @@
 	{% set lastPage = search.pages() | last %}
 	<updated>{{ lastPage.data.date | date("ATOM") }}</updated>
 	<id>{{ "/" | url(true) }}</id>
-	<author>
-		<name>{{ author.name }}</name>
-		<email>{{ author.email }}</email>
-	</author>
 	{%- for post in search.pages("type=post", "date=desc", 10) %}
 	<entry>
 		<title>{{ post.data.title }}</title>

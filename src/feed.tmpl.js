@@ -1,7 +1,7 @@
 export const url = "/feed.json";
 
 export default function (
-  { metas, author, search },
+  { metas, search },
   { md, url, date, htmlUrl },
 ) {
   const feed = {
@@ -10,10 +10,6 @@ export default function (
     home_page_url: url("", true),
     feed_url: url("feed.json", true),
     description: metas.description,
-    author: {
-      name: author.name,
-      url: author.url,
-    },
     items: [],
   };
 
