@@ -4,9 +4,9 @@
       {% set page = search.page("type=author author='" + author + "'") %}
       {% if page %}
         By <a data-pagefind-filter="author" href="{{ page.data.url }}">{{ author }}</a> | 
+      {% else %}
+        By {{ author }} | 
       {% endif %}
-    {% else %}
-    By {{ author or site.author.name }} | 
     {% endif %}
 
     <time datetime="{{ date | date('DATETIME') }}">
