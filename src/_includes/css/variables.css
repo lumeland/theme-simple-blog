@@ -11,11 +11,12 @@
   /* Fonts */
   --font-family-code: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
   --font-family-ui: -apple-system, system-ui, sans-serif;
+  --font-family-display: Epilogue, var(--font-family-ui);
 
   --font-code: 1rem/1.5 var(--font-family-code);
-  --font-display: bold clamp(2rem, 10vw, 4rem)/1 var(--font-family-ui);
+  --font-display: bold clamp(2rem, 10vw, 4rem)/1 var(--font-family-display);
   --font-display-spacing: -0.02em;
-  --font-title: bold clamp(1.5rem, 8vw, 2rem)/1.2 var(--font-family-ui);
+  --font-title: bold clamp(1.5rem, 8vw, 2rem)/1.2 var(--font-family-display);
   --font-title-spacing: -0.015em;
   --font-body: clamp(1rem, 5vw, 1.2rem)/1.5 var(--font-family-ui);
   --font-body-bold: bold var(--font-body);

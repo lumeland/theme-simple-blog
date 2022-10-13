@@ -26,6 +26,7 @@ export default function () {
       "_includes/templates/post-list.njk",
       "fonts/inter.woff2",
       "fonts/inter-italic.woff2",
+      "fonts/epilogue-bold.woff2",
       "posts/_data.yml",
       "_data.yml",
       "404.md",

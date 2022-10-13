@@ -1,10 +1,17 @@
 @font-face {
+  font-family: 'Epilogue';
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+  src: url("fonts/epilogue-bold.woff2") format("woff2");
+}
+@font-face {
   font-family: 'Inter';
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url("fonts/inter.woff2?v=3.19") format("woff2");
+  src: url("fonts/inter.woff2") format("woff2");
 }
 @font-face {
   font-family: 'Inter';
@@ -12,5 +19,5 @@
   font-display: swap;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url("fonts/inter-italic.woff2?v=3.19") format("woff2");
+  src: url("fonts/inter-italic.woff2") format("woff2");
 }
