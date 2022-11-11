@@ -31,8 +31,9 @@ export default function (options: Options = {}) {
       .copy("fonts")
       .copy("favicon.png")
       .preprocess([".md"], (page: Page) => {
-        page.data.excerpt ??=
-          (page.data.content as string).split("<!--more-->")[0];
+        page.data.excerpt ??= (page.data.content as string).toLowerCase().split(
+          /<!--\s*more\s*-->/,
+        )[0];
       });
 
     // Highlight.js stylesheet
