@@ -41,6 +41,12 @@ code {
   letter-spacing: 0;
 }
 
+:not(pre) > code {
+  background: var(--color-line);
+  padding: 0 .2rem;
+  border-radius: 4px;
+}
+
 hr {
   border: 0;
   border-top: solid 1px var(--color-line);

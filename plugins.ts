@@ -1,7 +1,7 @@
 import date from "lume/plugins/date.ts";
 import postcss from "lume/plugins/postcss.ts";
 import terser from "lume/plugins/terser.ts";
-import codeHighlight from "lume/plugins/code_highlight.ts";
+import prism, { Options as PrismOptions } from "lume/plugins/prism.ts";
 import basePath from "lume/plugins/base_path.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
@@ -11,12 +11,16 @@ import sitemap from "https://raw.githubusercontent.com/lumeland/experimental-plu
 
 import type { Page, Site } from "lume/core.ts";
 
+export interface Options {
+  prism?: Partial<PrismOptions>;
+}
+
 /** Configure the site */
-export default function () {
+export default function (options: Options = {}) {
   return (site: Site) => {
     site.use(postcss())
       .use(basePath())
-      .use(codeHighlight())
+      .use(prism(options.prism))
       .use(date())
       .use(metas())
       .use(resolveUrls())
@@ -34,7 +38,7 @@ export default function () {
     // Highlight.js stylesheet
     site.remoteFile(
       "_includes/css/code.css",
-      "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.0/build/styles/github-dark.min.css",
+      "https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-okaidia.min.css",
     );
   };
 }

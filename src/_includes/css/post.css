@@ -27,4 +27,9 @@
     color: var(--color-base);
     margin: 1.5em 0 .5em 0;
   }
+
+  & h2 {
+    font: var(--font-title);
+    letter-spacing: var(--font-title-spacing);
+  }
 }

@@ -7,9 +7,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [0.3.0] - 2022-11-11
+### Added
+- New `menu_links` option.
+
 ### Changed
 - Font for the Display and Titles styles.
+- Use `prism` plugin to highlight the code.
+
+### Fixed
+- Code and titles font styles.
 
 ## [0.2.1] - 2022-10-10
 ### Removed
@@ -41,7 +48,7 @@ First version
 [#1]: https://github.com/lumeland/theme-simple-blog/issues/1
 [#5]: https://github.com/lumeland/theme-simple-blog/issues/5
 
-[Unreleased]: https://github.com/lumeland/theme-simple-blog/compare/v0.2.1...HEAD
+[0.3.0]: https://github.com/lumeland/theme-simple-blog/compare/v0.2.1...v0.3.0
 [0.2.1]: https://github.com/lumeland/theme-simple-blog/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/lumeland/theme-simple-blog/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/lumeland/theme-simple-blog/compare/v0.1.0...v0.1.1

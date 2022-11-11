@@ -24,6 +24,13 @@
           </a>
         </li>
       {%- endfor %}
+      {%- for link in menu_links %}
+        <li>
+          <a href="{{ link.href }}">
+            {{ link.text }}
+          </a>
+        </li>
+      {%- endfor %}
       </ul>
     </nav>
 

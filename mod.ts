@@ -1,11 +1,13 @@
-import plugins from "./plugins.ts";
+import plugins, { Options } from "./plugins.ts";
 
 import type { Site } from "lume/core.ts";
 
-export default function () {
+export type { Options } from "./plugins.ts";
+
+export default function (options: Partial<Options> = {}) {
   return (site: Site) => {
     // Configure the site
-    site.use(plugins());
+    site.use(plugins(options));
 
     // Add remote files
     const files = [
@@ -30,7 +32,6 @@ export default function () {
       "posts/_data.yml",
       "_data.yml",
       "404.md",
-      "about.md",
       "archive_result.tmpl.js",
       "archive.tmpl.js",
       "feed.tmpl.js",

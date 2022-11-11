@@ -1,6 +1,8 @@
 home:
   welcome: Hello, I am a person that writes stuff.
 
+menu_links: []
+
 # Metas plugin https://lume.land/plugins/metas/#description
 metas:
   site: Blog name
