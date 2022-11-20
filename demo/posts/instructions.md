@@ -33,7 +33,8 @@ values:
 
 ```css
 :root {
-  /* Colors */
+  /* Light colors */
+  color-scheme: light;
   --color-base: hsl(220, 30%, 10%);
   --color-text: hsl(220, 30%, 20%);
   --color-dim: hsl(220, 30%, 40%);
@@ -59,5 +60,19 @@ values:
   /* Space */
   --row-gap-small: 2.5rem;
   --row-gap-medium: clamp(2rem, 5vh, 5rem);
+}
+
+/* Dark colors */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --color-base: hsl(220, 20%, 100%);
+    --color-text: hsl(220, 20%, 80%);
+    --color-dim: hsl(220, 20%, 60%);
+    --color-link: hsl(220, 20%, 100%);
+    --color-link-hover: hsl(220, 20%, 70%);
+    --color-line: hsl(220, 20%, 20%);
+    --color-background: hsl(220, 20%, 10%);
+  }
 }
 ```

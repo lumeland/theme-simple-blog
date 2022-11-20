@@ -1,5 +1,5 @@
 :root {
-  /* Colors */
+  /* Light colors */
   color-scheme: light;
   --color-base: hsl(220, 20%, 10%);
   --color-text: hsl(220, 20%, 20%);
@@ -54,6 +54,7 @@
   }
 }
 
+/* Dark colors */
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
