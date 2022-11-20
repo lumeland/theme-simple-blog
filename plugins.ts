@@ -7,7 +7,7 @@ import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
 import metas from "lume/plugins/metas.ts";
 import pagefind from "lume/plugins/pagefind.ts";
-import sitemap from "https://raw.githubusercontent.com/lumeland/experimental-plugins/b75edba434ab80d0b9033233f6ade19c09825eb7/sitemap/sitemap.ts";
+import sitemap from "lume/plugins/sitemap.ts";
 
 import type { Page, Site } from "lume/core.ts";
 
