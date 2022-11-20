@@ -9,18 +9,18 @@ project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.3.2] - Unreleased
 ### Changed
-- Configuration for `deno fmt` & `deno lint`
 - Upgraded to Lume `v1.13.0`.
-- Reduced Blog post header `margin-bottom`
+- Configuration for `deno fmt` & `deno lint`.
+- Reduced Blog post header `margin-bottom`.
 
 ### Fixed
-- Typos in markdown titles
-- Fixed archive back link `margin-bottom`
-- Fixed pagination `text-align`
-- Fixed pagination overlap on small devices
-- Fixed dark mode `color-scheme`
-- Fixed dark mode `scrollbar-color`
-- Fixed dark mode `PWA-color`
+- Typos in markdown titles.
+- Fixed archive back link `margin-bottom`.
+- Fixed pagination `text-align`.
+- Fixed pagination overlap on small devices.
+- Fixed dark mode `color-scheme`.
+- Fixed dark mode `scrollbar-color`.
+- Fixed dark mode `PWA-color`.
 
 ## [0.3.1] - 2022-11-16
 ### Fixed
