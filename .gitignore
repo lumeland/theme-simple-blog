@@ -1,3 +1,4 @@
 posts/*.md
 _site
 _bin
+deno.lock
