@@ -5,6 +5,7 @@
   font-style: normal;
   src: url("fonts/epilogue-bold.woff2") format("woff2");
 }
+
 @font-face {
   font-family: 'Inter';
   font-weight: 100 900;
@@ -13,6 +14,7 @@
   font-named-instance: 'Regular';
   src: url("fonts/inter.woff2") format("woff2");
 }
+
 @font-face {
   font-family: 'Inter';
   font-weight: 100 900;
