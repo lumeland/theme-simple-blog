@@ -61,6 +61,10 @@
   }
 }
 
+.page-pagination-prev {
+  text-align: right;
+}
+
 .page-pagination-next {
   margin-left: auto;
 }

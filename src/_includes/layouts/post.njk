@@ -20,7 +20,7 @@ bodyClass: body-post
     {%- if previousPost %}
     <li class="page-pagination-prev">
       <a href="{{ previousPost.data.url }}" rel="prev">
-        ← Older post:
+        <span>← Older post</span>
         <strong>{{ previousPost.data.title }}</strong>
       </a>
     </li>
@@ -30,7 +30,7 @@ bodyClass: body-post
     {%- if nextPost %}
     <li class="page-pagination-next">
       <a href="{{ nextPost.data.url }}" rel="next">
-        Newer post →
+        <span>Newer post →</span>
         <strong>{{ nextPost.data.title }}</strong>
       </a>
     </li>
