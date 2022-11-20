@@ -68,3 +68,11 @@
 .page-pagination-next {
   margin-left: auto;
 }
+
+@media only screen and (max-width: 576px){
+  .page-pagination {
+    & strong {
+      display: none;
+    }
+  }
+}
