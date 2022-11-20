@@ -1,5 +1,6 @@
 :root {
   /* Colors */
+  color-scheme: light;
   --color-base: hsl(220, 20%, 10%);
   --color-text: hsl(220, 20%, 20%);
   --color-dim: hsl(220, 20%, 40%);
@@ -55,6 +56,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    color-scheme: dark;
     --color-base: hsl(220, 20%, 100%);
     --color-text: hsl(220, 20%, 80%);
     --color-dim: hsl(220, 20%, 60%);
