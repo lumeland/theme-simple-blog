@@ -1,5 +1,5 @@
 .post-header {
-  margin-bottom: var(--row-gap-medium);
+  margin-bottom: var(--row-gap-xsmall);
 }
 .post-title {
   font: var(--font-display);

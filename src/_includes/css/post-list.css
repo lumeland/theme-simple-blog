@@ -10,7 +10,7 @@
   }
 
   & .post-header {
-    margin-bottom: 1rem;
+    margin-bottom: var(--row-gap-xsmall);
   }
 
   & .post-details {
@@ -27,4 +27,3 @@
     }
   }
 }
-
