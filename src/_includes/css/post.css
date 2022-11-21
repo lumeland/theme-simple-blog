@@ -37,6 +37,13 @@
   }
 }
 
+.post-body {
+  & .header-anchor {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
 .post-link {
   display: inline-block;
   color: var(--color-dim);
