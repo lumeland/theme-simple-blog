@@ -36,3 +36,9 @@
     letter-spacing: var(--font-title-spacing);
   }
 }
+
+.post-link {
+  display: inline-block;
+  color: var(--color-dim);
+  text-decoration: none;
+}

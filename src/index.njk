@@ -32,6 +32,10 @@ title: Home
     <div class="post-excerpt">
       {{ post.data.excerpt | md | safe }}
     </div>
+
+    <a href="{{ post.data.url }}" class="post-link">
+      Continue reading →
+    </a>
   </article>
 {% endeach %}
 </section>
