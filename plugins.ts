@@ -8,8 +8,14 @@ import resolveUrls from "lume/plugins/resolve_urls.ts";
 import metas from "lume/plugins/metas.ts";
 import pagefind from "lume/plugins/pagefind.ts";
 import sitemap from "lume/plugins/sitemap.ts";
+import toc from "https://deno.land/x/lume_markdown_plugins@v0.1.0/toc/mod.ts";
 
 import type { Page, Site } from "lume/core.ts";
+
+export const markdown = {
+  plugins: [toc],
+  keepDefaultPlugins: true,
+};
 
 export interface Options {
   prism?: Partial<PrismOptions>;
