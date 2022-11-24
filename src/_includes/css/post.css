@@ -38,7 +38,7 @@
 
 .post-tags {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   row-gap: 1em;
   column-gap: .5em;
   align-items: center;
