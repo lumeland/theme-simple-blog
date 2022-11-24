@@ -42,20 +42,6 @@
   row-gap: 1em;
   column-gap: .5em;
   align-items: center;
-  
-  & .tag {
-    border: 1px solid var(--color-line);
-    color: var(--color-text);
-    font-size: 90%;
-    font-weight: 300;
-    padding: 4px 8px;
-    border-radius: 4px;
-    text-decoration: none;
-  
-    &:hover {
-      background-color: var(--color-line);
-    }
-  }
 }
 
 .post-excerpt,
