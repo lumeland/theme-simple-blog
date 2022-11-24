@@ -23,12 +23,28 @@
     display: flex;
     flex-wrap: wrap;
     gap: .5em 1rem;
+
+    & li {
+      margin-bottom: 1em;
+    }
   }
 
   & h2 {
     font: var(--font-body-bold);
     letter-spacing: var(--font-body-spacing);
-    margin: .3em 0;
+    margin: 1em 0;
+  }
+
+  & .tag {
+    border: 1px solid var(--color-line);
+    color: var(--color-text);
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-decoration: none;
+  
+    &:hover {
+      background-color: var(--color-line);
+    }
   }
 }
 
