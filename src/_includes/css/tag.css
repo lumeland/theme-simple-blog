@@ -4,6 +4,7 @@
   padding: .2em .6em;
   border-radius: 4px;
   text-decoration: none;
+  display: inline-block;
 
   &:hover {
     background-color: var(--color-line);

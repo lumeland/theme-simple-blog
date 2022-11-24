@@ -22,17 +22,13 @@
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: .5em 1rem;
-
-    & li {
-      margin-bottom: 1em;
-    }
+    gap: .5em;
   }
 
   & h2 {
     font: var(--font-body-bold);
     letter-spacing: var(--font-body-spacing);
-    margin: 1em 0;
+    margin: .5em 0;
   }
 }
 

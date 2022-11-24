@@ -14,7 +14,7 @@
   row-gap: 1em;
   column-gap: .5em;
   align-items: center;
-  font: var(--font-ui);
+  font: var(--font-small);
   color: var(--color-dim);
 
   & p {
@@ -39,8 +39,7 @@
 .post-tags {
   display: flex;
   flex-flow: row wrap;
-  row-gap: 1em;
-  column-gap: .5em;
+  gap: .5em;
   align-items: center;
 }
 
