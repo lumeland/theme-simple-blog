@@ -7,20 +7,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
-## [0.3.2] - Unreleased
+## [0.4.0] - Unreleased
+### Added
+- Reading Time Plugin (experimental).
+
 ### Changed
-- Upgraded to Lume `v1.13.0`.
+- Upgraded to Lume `v1.13.1`.
 - Configuration for `deno fmt` & `deno lint`.
 - Reduced Blog post header `margin-bottom`.
+- Blog post tag style.
 
 ### Fixed
 - Typos in markdown titles.
-- Fixed archive back link `margin-bottom`.
-- Fixed pagination `text-align`.
-- Fixed pagination overlap on small devices.
-- Fixed dark mode `color-scheme`.
-- Fixed dark mode `scrollbar-color`.
-- Fixed dark mode `PWA-color`.
+- Archive back link `margin-bottom`.
+- Pagination `text-align` & overlap on small devices.
+- Dark mode `color-scheme`, `scrollbar-color` & `PWA-color`.
 
 ## [0.3.1] - 2022-11-16
 ### Fixed
