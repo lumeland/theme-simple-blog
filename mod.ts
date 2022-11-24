@@ -17,6 +17,7 @@ export default function (options: Partial<Options> = {}) {
       "_includes/css/post-list.css",
       "_includes/css/post.css",
       "_includes/css/reset.css",
+      "_includes/css/tag.css",
       "_includes/css/variables.css",
       "_includes/css/search.css",
       "_includes/layouts/archive_result.njk",
