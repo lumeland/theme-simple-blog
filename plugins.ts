@@ -42,8 +42,12 @@ export default function (options: Options = {}) {
 
     // Highlight.js stylesheet
     site.remoteFile(
-      "_includes/css/code.css",
-      "https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-okaidia.min.css",
+      "_includes/css/code_dark.css",
+      "https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-twilight.min.css",
+    );
+    site.remoteFile(
+      "_includes/css/code_light.css",
+      "https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism.min.css",
     );
   };
 }
