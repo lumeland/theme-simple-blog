@@ -17,7 +17,7 @@
   --font-code: .9em/1.5 var(--font-family-code);
   --font-display: bold clamp(2rem, 10vw, 4rem)/1 var(--font-family-display);
   --font-display-spacing: -0.02em;
-  --font-title: bold clamp(1.5rem, 8vw, 2rem)/1.2 var(--font-family-display);
+  --font-title: bold clamp(1.5rem, 8vw, 2rem)/1.2 var(--font-family-ui);
   --font-title-spacing: -0.015em;
   --font-body: clamp(1rem, 5vw, 1.2rem)/1.6 var(--font-family-ui);
   --font-body-bold: bold var(--font-body);
@@ -25,6 +25,7 @@
   --font-ui: 1rem/1.4 var(--font-family-ui);
   --font-ui-bold: bold var(--font-ui);
   --font-small: 0.85rem/1.4 var(--font-family-ui);
+  --font-small-bold: bold var(--font-small);
 
   /* Space */
   --row-gap-xsmall: 1rem;

@@ -9,6 +9,29 @@ bodyClass: body-post
     {% include "templates/post-details.njk" %}
   </header>
 
+  {% if toc.length > 1 or toc[0].children.length %}
+  <nav class="post-toc">
+    <h2>Table of contents</h2>
+    <ol>
+      {% for item in toc %}
+      <li>
+        <a href="#{{ item.slug }}">{{ item.text }}</a>
+
+        {% if item.children.length %}
+        <ul>
+          {% for child in item.children %}
+          <li>
+            <a href="#{{ child.slug }}">{{ child.text }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </nav>
+  {% endif %}
+
   <div class="post-body">
     {{ content | safe }}
   </div>

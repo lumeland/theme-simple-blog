@@ -1,2 +1,5 @@
 type: post
 layout: layouts/post.njk
+
+metas:
+  title: "=title"

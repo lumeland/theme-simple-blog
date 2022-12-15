@@ -1,3 +1,5 @@
+lang: en
+
 home:
   welcome: Hello, I am a person that writes stuff.
 
@@ -6,7 +8,4 @@ metas:
   site: Blog example
   description: This is an example of a Lume blog theme
   twitter: "@misteroom"
-  lang: en
-
-mergedKeys:
-  metas: object
+  lang: "=lang"

@@ -7,8 +7,6 @@ menu_links: []
 metas:
   site: Blog name
   description: General description of the blog
+  title: "=title"
   twitter: "@username"
   lang: en
-
-mergedKeys:
-  metas: object

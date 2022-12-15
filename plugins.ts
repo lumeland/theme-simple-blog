@@ -9,6 +9,7 @@ import metas from "lume/plugins/metas.ts";
 import pagefind from "lume/plugins/pagefind.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import readingTime from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/reading_time/mod.ts";
+import toc from "https://deno.land/x/lume_markdown_plugins@v0.1.0/toc/mod.ts";
 
 import type { Page, Site } from "lume/core.ts";
 
@@ -19,16 +20,13 @@ export interface Options {
 /** Configure the site */
 export default function (options: Options = {}) {
   return (site: Site) => {
+    site.hooks?.addMarkdownItPlugin?.(toc);
     site.use(postcss())
       .use(basePath())
       .use(prism(options.prism))
       .use(readingTime())
       .use(date())
-      .use(metas({
-        defaultPageData: {
-          title: "title",
-        },
-      }))
+      .use(metas())
       .use(resolveUrls())
       .use(slugifyUrls())
       .use(pagefind())
