@@ -13,6 +13,7 @@ project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Upgrade to Lume `1.14.2`.
+- `metas` plugin default configuration.
 - Some styles tweaks.
 
 ## [0.4.0] - 2022-11-24
