@@ -1,7 +1,7 @@
 .page-header {
   margin-bottom: var(--row-gap-medium);
 
-  & p:first-child {
+  & > p:first-child {
     margin-top: 0;
     margin-bottom: var(--row-gap-medium);
   }

@@ -16,15 +16,18 @@ bodyClass: body-tag
 </header>
 
 {% if pagination.page == 1 %}
+{% set pageTags = search.pages("type=tag", "tag") %}
+{% if pageTags.length %}
 <nav class="page-navigation">
   <h2>Tags:</h2>
   
   <ul class="page-navigation-tags">
-  {% for page in search.pages("type=tag", "tag") %}
-    <li><a href="{{ page.data.url }}" class="tag">{{ page.data.tag }}</a></li>
+  {% for page in pageTags %}
+    <li><a href="{{ page.data.url }}" class="badge">{{ page.data.tag }}</a></li>
   {% endfor %}
   </ul>
 </nav>
+{% endif %}
 {% endif %}
 
 {% set postslist = results %}
