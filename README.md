@@ -34,4 +34,4 @@ your own data. The posts must be saved in the `posts` folder. For example:
 
 To use this theme as a base template for a more customized blog, clone this repo
 and edit the [_config.ts](./_config.ts) file. The source files are in the
-[src](./src/) folder.
+[src](./src/) folder. And you can remove the `/demo` folder.
