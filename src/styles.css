@@ -1,13 +1,30 @@
-@import "css/fonts.css";
-@import "css/variables.css";
-@import "css/reset.css";
+/* Lume's design system */
+@import "https://unpkg.com/@lumeland/ds@0.1.0/ds.css";
+
+/* Custom components */
 @import "css/navbar.css";
+@import "css/page.css";
 @import "css/post-list.css";
 @import "css/post.css";
-@import "css/badge.css";
-@import "css/page.css";
-@import "css/search.css";
 
-/* Remote files */
-@import "css/code_light.css" (prefers-color-scheme: light);
-@import "css/code_dark.css" (prefers-color-scheme: dark);
+/* Make the links black */
+:root {
+  --color-link: var(--color-base);
+  --color-link-hover: var(--color-dim);
+}
+
+/* Page layout */
+main {
+  padding: var(--row-gap-medium) 5vw;
+  max-width: 55em;
+  margin: 0 auto;
+
+  & > :first-child {
+    margin-top: 0;
+  }
+}
+
+/* Search tweak */
+.search {
+  margin-top: var(--row-gap-xsmall);
+}

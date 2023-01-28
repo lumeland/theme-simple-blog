@@ -10,7 +10,7 @@ bodyClass: body-post
   </header>
 
   {% if toc.length > 1 or toc[0].children.length %}
-  <nav class="post-toc">
+  <nav class="toc">
     <h2>Table of contents</h2>
     <ol>
       {% for item in toc %}
@@ -32,16 +32,16 @@ bodyClass: body-post
   </nav>
   {% endif %}
 
-  <div class="post-body">
+  <div class="post-body body">
     {{ content | safe }}
   </div>
 </article>
 
-<nav class="page-pagination">
+<nav class="page-pagination pagination">
   <ul>
     {%- set previousPost = search.previousPage(url, "type=post") %}
     {%- if previousPost %}
-    <li class="page-pagination-prev">
+    <li class="pagination-prev">
       <a href="{{ previousPost.data.url }}" rel="prev">
         <span>← Older post</span>
         <strong>{{ previousPost.data.title }}</strong>
@@ -51,7 +51,7 @@ bodyClass: body-post
 
     {%- set nextPost = search.nextPage(url, "type=post") %}
     {%- if nextPost %}
-    <li class="page-pagination-next">
+    <li class="pagination-next">
       <a href="{{ nextPost.data.url }}" rel="next">
         <span>Newer post →</span>
         <strong>{{ nextPost.data.title }}</strong>

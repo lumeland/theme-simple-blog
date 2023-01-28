@@ -5,12 +5,6 @@
   row-gap: 1rem;
   justify-content: space-between;
   padding: 2rem min(5vw, 5rem);
-
-  & a {
-    &:not(:hover) {
-      text-decoration: none;
-    }
-  }
 }
 
 .navbar-links {
@@ -21,7 +15,6 @@
   flex-wrap: wrap;
   column-gap: 1.5rem;
   font: var(--font-ui-bold);
-  text-decoration: underline;
 
   & [aria-current="page"] {
     text-decoration: none;
@@ -33,4 +26,8 @@
   margin-left: auto;
   display: flex;
   align-items: center;
+}
+
+.navbar-home {
+  text-decoration: none;
 }

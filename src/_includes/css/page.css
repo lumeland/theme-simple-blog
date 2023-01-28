@@ -35,44 +35,4 @@
 .page-pagination {
   border-top: solid 1px var(--color-line);
   margin-top: var(--row-gap-medium);
-
-  & ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 2rem;
-    justify-content: space-between;
-  }
-
-  & a {
-    display: block;
-    text-decoration: none;
-    color: var(--color-dim);
-
-    &:hover strong {
-      text-decoration: underline;
-    }
-  }
-
-  & strong {
-    color: var(--color-base);
-    display: block;
-  }
-}
-
-.page-pagination-prev {
-  text-align: right;
-}
-
-.page-pagination-next {
-  margin-left: auto;
-}
-
-@media only screen and (max-width: 576px){
-  .page-pagination {
-    & strong {
-      display: none;
-    }
-  }
 }
