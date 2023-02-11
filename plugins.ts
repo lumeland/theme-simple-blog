@@ -40,14 +40,10 @@ export default function (options: Options = {}) {
         )[0];
       });
 
-    // Highlight.js stylesheet
+    // Basic CSS Design System
     site.remoteFile(
-      "_includes/css/code_dark.css",
-      "https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-twilight.min.css",
-    );
-    site.remoteFile(
-      "_includes/css/code_light.css",
-      "https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism.min.css",
+      "_includes/css/ds.css",
+      "https://unpkg.com/@lumeland/ds/ds.css",
     );
   };
 }
