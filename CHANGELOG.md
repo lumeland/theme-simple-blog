@@ -7,6 +7,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.7.0] - Unreleased
+### Added
+- `extra_head` variable to insert additional code in the page `head` (like styles or scripts)
+
 ## [0.6.0] - 2023-02-11
 ### Changed
 - Use the `@lumeland/ds` NPM package for the basic styles.
