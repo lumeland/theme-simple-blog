@@ -34,20 +34,20 @@ bodyClass: body-tag
 {% include "templates/post-list.njk" %}
 
 {% if pagination.totalPages != 1 %}
-<nav class="page-pagination">
+<nav class="page-pagination pagination">
   <ul>
     {%- if pagination.previous %}
-    <li>
+    <li class="pagination-prev">
       <a href="{{ pagination.previous }}" rel="prev">← Previous</a>
     </li>
     {% endif %}
 
-    <li>
+    <li class="pagination-page">
       Page {{ pagination.page }}
     </li>
 
     {%- if pagination.next %}
-    <li>
+    <li class="pagination-next">
       <a href="{{ pagination.next }}" rel="next">Next →</a>
     </li>
     {% endif %}
