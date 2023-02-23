@@ -8,5 +8,6 @@ metas:
   site: Blog name
   description: General description of the blog
   title: "=title"
+  image: "=image"
   twitter: "@username"
   lang: en

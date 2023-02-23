@@ -1,6 +1,6 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v1.15.1/"
+    "lume/": "https://deno.land/x/lume@v1.15.3/"
   },
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",

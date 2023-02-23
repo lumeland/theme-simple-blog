@@ -9,7 +9,8 @@ import metas from "lume/plugins/metas.ts";
 import pagefind from "lume/plugins/pagefind.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import readingTime from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/reading_time/mod.ts";
-import toc from "https://deno.land/x/lume_markdown_plugins@v0.1.0/toc/mod.ts";
+import toc from "https://deno.land/x/lume_markdown_plugins@v0.3.0/toc.ts";
+import image from "https://deno.land/x/lume_markdown_plugins@v0.3.0/image.ts";
 
 import type { Page, Site } from "lume/core.ts";
 
@@ -27,6 +28,7 @@ export default function (options: Options = {}) {
       .use(readingTime())
       .use(date())
       .use(metas())
+      .use(image())
       .use(resolveUrls())
       .use(slugifyUrls())
       .use(pagefind())

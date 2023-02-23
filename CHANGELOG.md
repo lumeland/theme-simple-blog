@@ -10,6 +10,8 @@ project adheres to [Semantic Versioning](http://semver.org/).
 ## [0.7.0] - Unreleased
 ### Added
 - `extra_head` variable to insert additional code in the page `head` (like styles or scripts)
+- Allow to insert HTML in the `home.welcome` variable.
+- Added Opengraph image.
 
 ## [0.6.0] - 2023-02-11
 ### Changed

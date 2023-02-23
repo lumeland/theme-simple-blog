@@ -7,7 +7,7 @@ title: Home
 {% set postslist = search.pages("type=post", "date=desc", 3) %}
 
 <header class="page-header">
-  <h1 class="page-title">{{ home.welcome }}</h1>
+  <h1 class="page-title">{{ home.welcome | safe }}</h1>
 
   <div class="search" id="search"></div>
 </header>
