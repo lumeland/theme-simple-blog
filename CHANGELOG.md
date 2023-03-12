@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
-## [0.7.1] - Unreleased
+## [0.7.1] - 2023-03-12
 ### Fixed
 - Pagination styles in the archive page.
 
@@ -107,6 +107,7 @@ First version
 [#1]: https://github.com/lumeland/theme-simple-blog/issues/1
 [#5]: https://github.com/lumeland/theme-simple-blog/issues/5
 
+[0.7.1]: https://github.com/lumeland/theme-simple-blog/compare/v0.7.0...v0.7.1
 [0.7.0]: https://github.com/lumeland/theme-simple-blog/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/lumeland/theme-simple-blog/compare/v0.5.2...v0.6.0
 [0.5.2]: https://github.com/lumeland/theme-simple-blog/compare/v0.5.1...v0.5.2
