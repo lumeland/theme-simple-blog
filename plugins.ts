@@ -8,6 +8,7 @@ import resolveUrls from "lume/plugins/resolve_urls.ts";
 import metas from "lume/plugins/metas.ts";
 import pagefind from "lume/plugins/pagefind.ts";
 import sitemap from "lume/plugins/sitemap.ts";
+import feed from "lume/plugins/feed.ts";
 import readingTime from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/reading_time/mod.ts";
 import toc from "https://deno.land/x/lume_markdown_plugins@v0.4.0/toc.ts";
 import image from "https://deno.land/x/lume_markdown_plugins@v0.4.0/image.ts";
@@ -34,6 +35,17 @@ export default function (options: Options = {}) {
       .use(pagefind())
       .use(terser())
       .use(sitemap())
+      .use(feed({
+        output: ["/feed.xml", "/feed.json"],
+        query: "type=post",
+        info: {
+          title: "=metas.site",
+          description: "=metas.description",
+        },
+        items: {
+          title: "=title",
+        },
+      }))
       .copy("fonts")
       .copy("favicon.png")
       .preprocess([".md"], (page: Page) => {

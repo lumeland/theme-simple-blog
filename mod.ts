@@ -35,8 +35,6 @@ export default function (options: Partial<Options> = {}) {
       "404.md",
       "archive_result.tmpl.js",
       "archive.tmpl.js",
-      "feed.tmpl.js",
-      "feed.xml.njk",
       "index.njk",
       "styles.css",
       "favicon.png",

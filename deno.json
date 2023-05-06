@@ -1,6 +1,6 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v1.15.3/"
+    "lume/": "https://deno.land/x/lume@v1.17.0/"
   },
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
@@ -9,12 +9,10 @@
     "changelog": "deno run --allow-read --allow-write https://deno.land/x/changelog@v2.1.0/bin.ts"
   },
   "lint": {
-    "files": {
-      "exclude": [
-        "./_site",
-        "./_bin"
-      ]
-    },
+    "exclude": [
+      "./_site",
+      "./_bin"
+    ],
     "rules": {
       "tags": [
         "recommended"
@@ -22,11 +20,9 @@
     }
   },
   "fmt": {
-    "files": {
-      "exclude": [
-        "./_site",
-        "./_bin"
-      ]
-    }
+    "exclude": [
+      "./_site",
+      "./_bin"
+    ]
   }
 }
