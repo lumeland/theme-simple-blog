@@ -9,3 +9,9 @@ metas:
   description: This is an example of a Lume blog theme
   twitter: "@misteroom"
   lang: "=lang"
+
+mergedKeys:
+  static_text: object
+
+static_text:
+  toc_name: Table of Contents
