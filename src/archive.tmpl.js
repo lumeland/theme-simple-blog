@@ -1,4 +1,4 @@
-export const layout = "layouts/archive.njk";
+export const layout = "layouts/archive.vto";
 export const title = "Archive";
 
 export default function* ({ search, paginate }) {

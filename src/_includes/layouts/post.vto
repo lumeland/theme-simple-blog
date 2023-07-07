@@ -1,62 +1,62 @@
 ---
-layout: layouts/base.njk
+layout: layouts/base.vto
 bodyClass: body-post
 ---
 <article class="post" data-pagefind-body data-title="{{ title }}" data-pagefind-index-attrs="data-title">
   <header class="post-header">
     <h1 class="post-title">{{ title }}</h1>
 
-    {% include "templates/post-details.njk" %}
+    {{ include "templates/post-details.vto" }}
   </header>
 
-  {% if toc.length > 1 or toc[0].children.length %}
+  {{ if toc.length > 1 || toc[0].children.length }}
   <nav class="toc">
     <h2>Table of contents</h2>
     <ol>
-      {% for item in toc %}
+      {{ for item of toc }}
       <li>
         <a href="#{{ item.slug }}">{{ item.text }}</a>
 
-        {% if item.children.length %}
+        {{ if item.children.length }}
         <ul>
-          {% for child in item.children %}
+          {{ for child of item.children }}
           <li>
             <a href="#{{ child.slug }}">{{ child.text }}</a>
           </li>
-          {% endfor %}
+          {{ /for }}
         </ul>
-        {% endif %}
+        {{ /if }}
       </li>
-      {% endfor %}
+      {{ /for }}
     </ol>
   </nav>
-  {% endif %}
+  {{ /if }}
 
   <div class="post-body body">
-    {{ content | safe }}
+    {{ content }}
   </div>
 </article>
 
 <nav class="page-pagination pagination">
   <ul>
-    {%- set previousPost = search.previousPage(url, "type=post") %}
-    {%- if previousPost %}
+    {{- set previousPost = search.previousPage(url, "type=post") }}
+    {{- if previousPost }}
     <li class="pagination-prev">
       <a href="{{ previousPost.data.url }}" rel="prev">
         <span>← Older post</span>
         <strong>{{ previousPost.data.title }}</strong>
       </a>
     </li>
-    {% endif %}
+    {{ /if }}
 
-    {%- set nextPost = search.nextPage(url, "type=post") %}
-    {%- if nextPost %}
+    {{- set nextPost = search.nextPage(url, "type=post") }}
+    {{- if nextPost }}
     <li class="pagination-next">
       <a href="{{ nextPost.data.url }}" rel="next">
         <span>Newer post →</span>
         <strong>{{ nextPost.data.title }}</strong>
       </a>
     </li>
-    {% endif %}
+    {{ /if }}
   </ul>
 </nav>

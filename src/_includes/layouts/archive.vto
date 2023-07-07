@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.njk
+layout: layouts/base.vto
 bodyClass: body-tag
 ---
 <header class="page-header">
@@ -10,47 +10,46 @@ bodyClass: body-tag
     <a href="/feed.xml">Atom</a>, <a href="/feed.json">JSON</a>
   </p>
 
-  {% if pagination.page == 1 %}
+  {{ if pagination.page === 1 }}
   <div class="search" id="search"></div>
-  {% endif %}
+  {{ /if }}
 </header>
 
-{% if pagination.page == 1 %}
-{% set pageTags = search.pages("type=tag", "tag") %}
-{% if pageTags.length %}
+{{ if pagination.page === 1 }}
+{{ set pageTags = search.pages("type=tag", "tag") }}
+{{ if pageTags.length }}
 <nav class="page-navigation">
   <h2>Tags:</h2>
   
   <ul class="page-navigation-tags">
-  {% for page in pageTags %}
+  {{ for page of pageTags }}
     <li><a href="{{ page.data.url }}" class="badge">{{ page.data.tag }}</a></li>
-  {% endfor %}
+  {{ /for }}
   </ul>
 </nav>
-{% endif %}
-{% endif %}
+{{ /if }}
+{{ /if }}
 
-{% set postslist = results %}
-{% include "templates/post-list.njk" %}
+{{ include "templates/post-list.vto" { postslist: results } }}
 
-{% if pagination.totalPages != 1 %}
+{{ if pagination.totalPages !== 1 }}
 <nav class="page-pagination pagination">
   <ul>
-    {%- if pagination.previous %}
+    {{- if pagination.previous }}
     <li class="pagination-prev">
       <a href="{{ pagination.previous }}" rel="prev">← Previous</a>
     </li>
-    {% endif %}
+    {{ /if }}
 
     <li class="pagination-page">
       Page {{ pagination.page }}
     </li>
 
-    {%- if pagination.next %}
+    {{- if pagination.next }}
     <li class="pagination-next">
       <a href="{{ pagination.next }}" rel="next">Next →</a>
     </li>
-    {% endif %}
+    {{ /if }}
   </ul>
 </nav>
-{% endif %}
+{{ /if }}

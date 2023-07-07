@@ -1,5 +1,5 @@
 ---
-layout: layouts/page.njk
+layout: layouts/page.vto
 title: About Me
 menu:
   visible: true

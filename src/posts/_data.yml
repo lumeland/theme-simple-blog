@@ -1,5 +1,5 @@
 type: post
-layout: layouts/post.njk
+layout: layouts/post.vto
 
 metas:
   title: "=title"

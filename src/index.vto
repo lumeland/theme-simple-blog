@@ -1,0 +1,44 @@
+---
+layout: layouts/base.vto
+bodyClass: body-home
+title: Home
+---
+
+<header class="page-header">
+  <h1 class="page-title">{{ home.welcome }}</h1>
+
+  <div class="search" id="search"></div>
+</header>
+
+<section class="postList">
+  {{ for post of search.pages("type=post", "date=desc", 3) }}
+  <article class="post">
+    <header class="post-header">
+      <h2 class="post-title">
+        <a href="{{ post.data.url }}" {{ if post.data.url == url }} aria-current="page"{{ /if }}>
+          {{ post.data.title || post.data.url }}
+        </a>
+      </h2>
+
+      {{ include "templates/post-details.vto" {
+        date: post.data.date,
+        tags: post.data.tags,
+        author: post.data.author,
+        readingTime: post.data.readingTime
+        } }}
+    </header>
+
+    <div class="post-excerpt body">
+      {{ post.data.excerpt |> md }}
+    </div>
+
+    <a href="{{ post.data.url }}" class="post-link">
+      Continue reading →
+    </a>
+  </article>
+{{ /for }}
+</section>
+
+<hr>
+
+<p>More posts can be found in <a href="/archive/">the archive</a>.</p>

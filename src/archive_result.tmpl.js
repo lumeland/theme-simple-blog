@@ -1,4 +1,4 @@
-export const layout = "layouts/archive_result.njk";
+export const layout = "layouts/archive_result.vto";
 
 export default function* ({ search }) {
   // Generate a page for each tag

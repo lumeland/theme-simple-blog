@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.njk
+layout: layouts/base.vto
 bodyClass: body-tag
 ---
 <header class="page-header">
@@ -7,5 +7,4 @@ bodyClass: body-tag
   <h1 class="page-title">{{ title }}</h1>
 </header>
 
-{% set postslist = search.pages(search_query) %}
-{% include "templates/post-list.njk" %}
+{{ include "templates/post-list.vto" { postslist: search.pages(search_query) } }}
