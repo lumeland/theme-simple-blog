@@ -8,7 +8,7 @@ project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.8.0] - 2023-07-07
 ### Changed
-- Switch to Vento (from Nunjuks) a the template engine.
+- Switch to Vento (from Nunjuks) as the template engine.
 - Minimum Lume version supported is 1.18.1.
 - Use the feed plugin to generate RSS.
 
