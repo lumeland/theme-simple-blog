@@ -43,7 +43,7 @@ bodyClass: body-post
     {{- if previousPost }}
     <li class="pagination-prev">
       <a href="{{ previousPost.data.url }}" rel="prev">
-        <span>← Older post</span>
+        <span>{{ i18n.nav.previous_post }}</span>
         <strong>{{ previousPost.data.title }}</strong>
       </a>
     </li>
@@ -53,7 +53,7 @@ bodyClass: body-post
     {{- if nextPost }}
     <li class="pagination-next">
       <a href="{{ nextPost.data.url }}" rel="next">
-        <span>Newer post →</span>
+        <span>{{ i18n.nav.next_post }}</span>
         <strong>{{ nextPost.data.title }}</strong>
       </a>
     </li>

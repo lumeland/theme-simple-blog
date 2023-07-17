@@ -1,11 +1,11 @@
 export const layout = "layouts/archive_result.vto";
 
-export default function* ({ search }) {
+export default function* ({ search, i18n }) {
   // Generate a page for each tag
   for (const tag of search.values("tags")) {
     yield {
       url: `/archive/${tag}/`,
-      title: `Tagged “${tag}”`,
+      title: `${i18n.search.by_tag}  “${tag}”`,
       type: "tag",
       search_query: `type=post '${tag}'`,
       tag,
@@ -16,7 +16,7 @@ export default function* ({ search }) {
   for (const author of search.values("author")) {
     yield {
       url: `/author/${author}/`,
-      title: `Posts by ${author}`,
+      title: `${i18n.search.by_author} ${author}`,
       type: "author",
       search_query: `type=post author='${author}'`,
       author,

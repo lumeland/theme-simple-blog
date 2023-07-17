@@ -1,4 +1,4 @@
-import date from "lume/plugins/date.ts";
+import date, { Options as DateOptions } from "lume/plugins/date.ts";
 import postcss from "lume/plugins/postcss.ts";
 import terser from "lume/plugins/terser.ts";
 import prism, { Options as PrismOptions } from "lume/plugins/prism.ts";
@@ -18,6 +18,7 @@ import type { Page, Site } from "lume/core.ts";
 
 export interface Options {
   prism?: Partial<PrismOptions>;
+  date?: Partial<DateOptions>;
 }
 
 /** Configure the site */
@@ -28,7 +29,7 @@ export default function (options: Options = {}) {
       .use(toc())
       .use(prism(options.prism))
       .use(readingTime())
-      .use(date())
+      .use(date(options.date))
       .use(metas())
       .use(image())
       .use(resolveUrls())

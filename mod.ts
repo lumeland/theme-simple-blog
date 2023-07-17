@@ -32,6 +32,7 @@ export default function (options: Partial<Options> = {}) {
       "fonts/epilogue-bold.woff2",
       "posts/_data.yml",
       "_data.yml",
+      "_data/i18n.yml",
       "404.md",
       "archive_result.tmpl.js",
       "archive.tmpl.js",

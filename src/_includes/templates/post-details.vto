@@ -1,12 +1,12 @@
 <div class="post-details">
-  {{# {{ if author }}
+  {{ if author }}
     {{ set page = search.page(`type=author author="author"`) }}
     {{ if page }}
-      <p>By <a data-pagefind-filter="author" href="{{ page.data.url }}">{{ author }}</a></p>
+      <p>{{ i18n.post.by}} <a data-pagefind-filter="author" href="{{ page.data.url }}">{{ author }}</a></p>
     {{ else }}
-      <p>By {{ author }}</p>
+      <p>{{ i18n.post.by}} {{ author }}</p>
     {{ /if }}
-  {{ /if }} #}}
+  {{ /if }}
 
   <p>
     <time datetime="{{ date |> date('DATETIME') }}">
@@ -14,7 +14,7 @@
     </time>
   </p>
 
-  <p>{{ readingTime.minutes }} min read</p>
+  <p>{{ readingTime.minutes }} {{ i18n.post.reading_time}}</p>
 
   <div class="post-tagsss">
     {{ for tag of tags }}

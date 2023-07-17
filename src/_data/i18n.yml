@@ -1,0 +1,17 @@
+nav:
+  toc: Table of Contents
+  next_post: Newer post →
+  previous_post: ← Older post
+  continue_reading: Continue reading →
+  archive: More posts can be found in <a href="/archive/">the archive</a>.
+  back: ← Back
+  page: Page
+  next: Next →
+  previous: ← Previous
+post:
+  by: by
+  reading_time: min read
+search:
+  by_author: Posts by 
+  by_tag: Tagged 
+  tags: Tags
