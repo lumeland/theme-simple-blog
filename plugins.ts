@@ -11,8 +11,8 @@ import sitemap from "lume/plugins/sitemap.ts";
 import feed from "lume/plugins/feed.ts";
 import vento from "lume/plugins/vento.ts";
 import readingTime from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/reading_time/mod.ts";
-import toc from "https://deno.land/x/lume_markdown_plugins@v0.4.0/toc.ts";
-import image from "https://deno.land/x/lume_markdown_plugins@v0.4.0/image.ts";
+import toc from "https://deno.land/x/lume_markdown_plugins@v0.5.0/toc.ts";
+import image from "https://deno.land/x/lume_markdown_plugins@v0.5.0/image.ts";
 
 import type { Page, Site } from "lume/core.ts";
 
@@ -61,7 +61,7 @@ export default function (options: Options = {}) {
     // Basic CSS Design System
     site.remoteFile(
       "_includes/css/ds.css",
-      "https://unpkg.com/@lumeland/ds/ds.css",
+      "https://unpkg.com/@lumeland/ds@0.2.4/ds.css",
     );
   };
 }
