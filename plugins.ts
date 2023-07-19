@@ -6,7 +6,7 @@ import basePath from "lume/plugins/base_path.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
 import metas from "lume/plugins/metas.ts";
-import pagefind from "lume/plugins/pagefind.ts";
+import pagefind, { Options as PagefindOptions } from "lume/plugins/pagefind.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import feed from "lume/plugins/feed.ts";
 import vento from "lume/plugins/vento.ts";
@@ -19,6 +19,7 @@ import type { Page, Site } from "lume/core.ts";
 export interface Options {
   prism?: Partial<PrismOptions>;
   date?: Partial<DateOptions>;
+  pagefind?: Partial<PagefindOptions>;
 }
 
 /** Configure the site */
@@ -34,7 +35,7 @@ export default function (options: Options = {}) {
       .use(image())
       .use(resolveUrls())
       .use(slugifyUrls())
-      .use(pagefind())
+      .use(pagefind(options.pagefind))
       .use(terser())
       .use(sitemap())
       .use(vento())
