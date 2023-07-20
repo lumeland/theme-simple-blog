@@ -7,16 +7,16 @@
 - Sitemap and SEO features.
 - Instant search engine.
 
-## Install as remote theme
+## Install as a remote theme
 
 The **fastest and easiest** way to use this theme is by importing it as a remote
-module. It allows to create a blog in seconds and update it at any time just
-changing the version number in the import url. Just add the following code to
+module. It allows to create a blog in seconds and update it at any time just by
+changing the version number in the import URL. Just add the following code to
 your `_config.ts` file:
 
 ```ts
 import lume from "lume/mod.ts";
-import blog from "https://deno.land/x/lume_theme_simple_blog@v0.5.0/mod.ts";
+import blog from "https://deno.land/x/lume_theme_simple_blog@v0.10.2/mod.ts";
 
 const site = lume();
 
@@ -27,10 +27,10 @@ export default site;
 
 You can see an example in the [demo](./demo) folder. To customize it copy the
 [`_data.yml`](./src/_data.yml) file in your blog root folder and edit it with
-your own data. The posts must be saved in the `posts` folder. For example:
-`posts/my-first-posts.md`.
+your data. The posts must be saved in the `posts` folder. For example
+`posts/`my-first-posts.md`.
 
-## Use it as base template
+## Use it as a base template
 
 To use this theme as a base template for a more customized blog, clone this repo
 and edit the [_config.ts](./_config.ts) file. The source files are in the
