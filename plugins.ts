@@ -11,9 +11,9 @@ import sitemap from "lume/plugins/sitemap.ts";
 import feed from "lume/plugins/feed.ts";
 import vento from "lume/plugins/vento.ts";
 import readingTime from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/reading_time/mod.ts";
-import toc from "https://deno.land/x/lume_markdown_plugins@v0.5.0/toc.ts";
-import image from "https://deno.land/x/lume_markdown_plugins@v0.5.0/image.ts";
-import footnotes from "https://deno.land/x/lume_markdown_plugins@v0.5.0/footnotes.ts";
+import toc from "https://deno.land/x/lume_markdown_plugins@v0.5.1/toc.ts";
+import image from "https://deno.land/x/lume_markdown_plugins@v0.5.1/image.ts";
+import footnotes from "https://deno.land/x/lume_markdown_plugins@v0.5.1/footnotes.ts";
 
 import type { Page, Site } from "lume/core.ts";
 
