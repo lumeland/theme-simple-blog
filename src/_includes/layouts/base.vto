@@ -19,7 +19,11 @@
   <body>
     <nav class="navbar">
       <a href="/" class="navbar-home">
-        <strong>{{ it.logo || metas.site }}</strong>
+        {{ if it.logo }}
+          {{ it.logo }}
+        {{ else }}
+          <strong>{{ metas.site }}</strong>
+        {{ /if }}
       </a>
 
       <ul class="navbar-links">
