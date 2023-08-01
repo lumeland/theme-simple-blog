@@ -13,6 +13,7 @@ import vento from "lume/plugins/vento.ts";
 import readingTime from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/reading_time/mod.ts";
 import toc from "https://deno.land/x/lume_markdown_plugins@v0.5.0/toc.ts";
 import image from "https://deno.land/x/lume_markdown_plugins@v0.5.0/image.ts";
+import footnotes from "https://deno.land/x/lume_markdown_plugins@v0.5.0/footnotes.ts";
 
 import type { Page, Site } from "lume/core.ts";
 
@@ -33,6 +34,7 @@ export default function (options: Options = {}) {
       .use(date(options.date))
       .use(metas())
       .use(image())
+      .use(footnotes())
       .use(resolveUrls())
       .use(slugifyUrls())
       .use(pagefind(options.pagefind))
@@ -61,7 +63,7 @@ export default function (options: Options = {}) {
     // Basic CSS Design System
     site.remoteFile(
       "_includes/css/ds.css",
-      "https://unpkg.com/@lumeland/ds@0.2.4/ds.css",
+      "https://unpkg.com/@lumeland/ds@0.3.0/ds.css",
     );
   };
 }

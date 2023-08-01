@@ -9,7 +9,7 @@ bodyClass: body-post
     {{ include "templates/post-details.vto" }}
   </header>
 
-  {{ if toc.length > 1 || (toc[0] && toc[0].children.length) }}
+  {{ if toc.length }}
   <nav class="toc">
     <h2>Table of contents</h2>
     <ol>
@@ -35,6 +35,19 @@ bodyClass: body-post
   <div class="post-body body">
     {{ content }}
   </div>
+
+  {{ if it.footnotes.length }}
+  <aside role="note" class="footnotes">
+    <dl>
+      {{ for note of footnotes }}
+      <div id={{ note.id }} class="footnote">
+        <dt><a href="#{{ note.refId }}">{{ note.label }}</a></dt>
+        <dd>{{ note.content }}</dd>
+      </div>
+      {{ /for }}
+    </dl>
+  </aside>
+  {{ /if }}
 </article>
 
 <nav class="page-pagination pagination">
