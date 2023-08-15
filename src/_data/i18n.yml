@@ -15,3 +15,8 @@ search:
   by_author: Posts by 
   by_tag: Tagged 
   tags: Tags
+comments:
+  title: Comments
+  description: |
+    You can leave a comment by replying to <a href=":src:">this Mastodon post</a> from your own account on Mastodon or any other ActivityPub-capable social network that can exchange replies with Mastodon.
+  empty: No comments yet

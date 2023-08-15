@@ -1,0 +1,133 @@
+.comments-section {
+  margin-top: 5em;
+}
+.comments-header {
+  & h2 {
+    font: var(--font-title);
+    letter-spacing: var(--font-title-spacing);
+    margin: 0;
+  }
+  & p {
+    font: var(--font-ui);
+    color: var(--color-dim);
+    margin: .5em 0;
+  }
+}
+.comments {
+  display: block;
+  padding: 2em;
+  margin-top: 2em;
+  background: var(--color-highlight);
+  border-radius: var(--border-radius);
+  border: solid 1px var(--color-line);
+  color: var(--color-dim);
+  font: var(--font-small);
+
+  & a {
+    color: currentColor;
+  }
+
+  & ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  & li + li {
+    margin-top: 2em;
+    padding-top: 2em;
+    border-top: solid 1px var(--color-line);
+  }
+  & article {
+    max-width: 600px;
+  }
+  & ul ul {
+    margin-top: 2em;
+    padding-top: 2em;
+    border-top: solid 1px var(--color-line);
+
+    @media (min-width: 600px) {
+      margin-left: 64px;
+    }
+  }
+  .comment-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    float: left;
+    margin-right: 14px;
+    box-shadow: 0 0 1px #0009;
+  }
+  .comment-user {
+    text-decoration: none;
+    display: block;
+    position: relative;
+  }
+  .comment-author {
+    position: absolute;
+    left: 35px;
+    top: 35px;
+    background: var(--color-highlight);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    color: var(--color-primary);
+  }
+  .comment-user:hover .comment-username {
+    text-decoration: underline;
+  }
+  .comment-username {
+    margin-right: .5em;
+    color: var(--color-text);
+  }
+  .comment-useraddress {
+    font-style: normal;
+  }
+  .comment-time {
+    font-size: small;
+  }
+  .comment-address {
+    color: currentColor;
+    text-decoration: none;
+    display: block;
+  }
+  .comment-address:hover {
+    text-decoration: underline;
+  }
+  .comment-body {
+    margin-top: 1em;
+    margin-left: 64px;
+    line-height: 1.5;
+
+    .invisible {
+      display: none;
+    }
+    .ellipsis::after {
+      content: "…";
+    }
+    .mention {
+      text-decoration: none;
+      color: var(--color-text);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .comment-body p {
+    margin: 0.5em 0 0;
+  }
+  .comment-counts {
+    display: flex;
+    column-gap: 1em;
+    font-size: small;
+
+    & svg {
+      color: var(--color-primary);
+    }
+  }
+  .comment-counts > span {
+    display: flex;
+    align-items: center;
+    column-gap: .3em;
+  }
+}

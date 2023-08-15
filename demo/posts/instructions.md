@@ -4,6 +4,8 @@ date: 2022-06-12
 author: Óscar Otero
 tags:
   - Instructions
+comments:
+  src: https://mastodon.gal/@misteroom/110810445656343599
 ---
 
 **Simple blog** is a clean and minimal blog theme for Lume, with support for

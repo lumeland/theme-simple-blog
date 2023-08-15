@@ -20,6 +20,7 @@ export default function (options: Partial<Options> = {}) {
       "_includes/css/badge.css",
       "_includes/css/variables.css",
       "_includes/css/search.css",
+      "_includes/css/comments.css",
       "_includes/layouts/archive_result.vto",
       "_includes/layouts/archive.vto",
       "_includes/layouts/base.vto",
@@ -39,6 +40,7 @@ export default function (options: Partial<Options> = {}) {
       "index.vto",
       "styles.css",
       "favicon.png",
+      "js/main.js",
     ];
 
     for (const file of files) {

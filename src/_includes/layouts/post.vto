@@ -48,6 +48,18 @@ bodyClass: body-post
     </dl>
   </aside>
   {{ /if }}
+
+  {{ if it.comments?.src }}
+  <aside class="comments-section">
+    <header class="comments-header">
+      <h2>{{ i18n.comments.title }}</h2>
+      <p>{{ i18n.comments.description.replace(":src:", it.comments.src) }}</p>
+    </header>
+    <mastodon-comments src="{{ it.comments.src }}" cache="{{ it.comments.cache ?? 60 }}" class="comments">
+      {{ i18n.comments.empty }}
+    </mastodon-comments>
+  {{ /if }}
+  </aside>
 </article>
 
 <nav class="page-pagination pagination">

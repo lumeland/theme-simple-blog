@@ -53,6 +53,7 @@ export default function (options: Options = {}) {
         },
       }))
       .copy("fonts")
+      .copy("js")
       .copy("favicon.png")
       .preprocess([".md"], (page: Page) => {
         page.data.excerpt ??= (page.data.content as string).split(
@@ -64,6 +65,12 @@ export default function (options: Options = {}) {
     site.remoteFile(
       "_includes/css/ds.css",
       "https://unpkg.com/@lumeland/ds@0.3.0/ds.css",
+    );
+
+    // Mastodon comment system
+    site.remoteFile(
+      "/js/comments.js",
+      "https://unpkg.com/@oom/mastodon-comments@0.2.0/src/comments.js",
     );
   };
 }

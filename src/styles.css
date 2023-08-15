@@ -6,6 +6,7 @@
 @import "css/page.css";
 @import "css/post-list.css";
 @import "css/post.css";
+@import "css/comments.css";
 
 /* Make the links black */
 :root {
