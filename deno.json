@@ -1,6 +1,6 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v1.18.4/"
+    "lume/": "https://deno.land/x/lume@v1.19.0/"
   },
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
@@ -10,8 +10,7 @@
   },
   "lint": {
     "exclude": [
-      "./_site",
-      "./_bin"
+      "./_site"
     ],
     "rules": {
       "tags": [
@@ -21,8 +20,7 @@
   },
   "fmt": {
     "exclude": [
-      "./_site",
-      "./_bin"
+      "./_site"
     ]
   }
 }
