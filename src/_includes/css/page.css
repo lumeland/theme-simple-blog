@@ -3,7 +3,6 @@
 
   & > p:first-child {
     margin-top: 0;
-    margin-bottom: var(--row-gap-medium);
   }
 }
 
