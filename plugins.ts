@@ -9,13 +9,12 @@ import metas from "lume/plugins/metas.ts";
 import pagefind, { Options as PagefindOptions } from "lume/plugins/pagefind.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import feed from "lume/plugins/feed.ts";
-import vento from "lume/plugins/vento.ts";
 import readingInfo from "lume/plugins/reading_info.ts";
 import toc from "https://deno.land/x/lume_markdown_plugins@v0.5.1/toc.ts";
 import image from "https://deno.land/x/lume_markdown_plugins@v0.5.1/image.ts";
 import footnotes from "https://deno.land/x/lume_markdown_plugins@v0.5.1/footnotes.ts";
 
-import type { Page, Site } from "lume/core.ts";
+import "lume/types.ts";
 
 export interface Options {
   prism?: Partial<PrismOptions>;
@@ -25,7 +24,7 @@ export interface Options {
 
 /** Configure the site */
 export default function (options: Options = {}) {
-  return (site: Site) => {
+  return (site: Lume.Site) => {
     site.use(postcss())
       .use(basePath())
       .use(toc())
@@ -40,7 +39,6 @@ export default function (options: Options = {}) {
       .use(terser())
       .use(pagefind(options.pagefind))
       .use(sitemap())
-      .use(vento())
       .use(feed({
         output: ["/feed.xml", "/feed.json"],
         query: "type=post",
@@ -55,10 +53,12 @@ export default function (options: Options = {}) {
       .copy("fonts")
       .copy("js")
       .copy("favicon.png")
-      .preprocess([".md"], (page: Page) => {
-        page.data.excerpt ??= (page.data.content as string).split(
-          /<!--\s*more\s*-->/i,
-        )[0];
+      .preprocess([".md"], (pages) => {
+        for (const page of pages) {
+          page.data.excerpt ??= (page.data.content as string).split(
+            /<!--\s*more\s*-->/i,
+          )[0];
+        }
       });
 
     // Basic CSS Design System

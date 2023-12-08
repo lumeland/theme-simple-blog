@@ -15,24 +15,24 @@ title: Home
   <article class="post">
     <header class="post-header">
       <h2 class="post-title">
-        <a href="{{ post.data.url }}" {{ if post.data.url == url }} aria-current="page"{{ /if }}>
-          {{ post.data.title || post.data.url }}
+        <a href="{{ post.url }}" {{ if post.url == url }} aria-current="page"{{ /if }}>
+          {{ post.title || post.url }}
         </a>
       </h2>
 
       {{ include "templates/post-details.vto" {
-        date: post.data.date,
-        tags: post.data.tags,
-        author: post.data.author,
-        readingInfo: post.data.readingInfo
+        date: post.date,
+        tags: post.tags,
+        author: post.author,
+        readingInfo: post.readingInfo
         } }}
     </header>
 
     <div class="post-excerpt body">
-      {{ post.data.excerpt |> md }}
+      {{ post.excerpt |> md }}
     </div>
 
-    <a href="{{ post.data.url }}" class="post-link">
+    <a href="{{ post.url }}" class="post-link">
       {{ i18n.nav.continue_reading }}
     </a>
   </article>

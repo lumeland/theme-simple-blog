@@ -23,7 +23,7 @@ bodyClass: body-tag
   
   <ul class="page-navigation-tags">
   {{ for page of pageTags }}
-    <li><a href="{{ page.data.url }}" class="badge">{{ page.data.tag }}</a></li>
+    <li><a href="{{ page.url }}" class="badge">{{ page.tag }}</a></li>
   {{ /for }}
   </ul>
 </nav>

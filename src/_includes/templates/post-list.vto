@@ -2,16 +2,16 @@
   {{ for post of postslist }}
   <li class="post">
     <h2 class="post-title">
-      <a href="{{ post.data.url }}" {{ if post.data.url == url }} aria-current="page"{{ /if }}>
-        {{ post.data.title || post.data.url }}
+      <a href="{{ post.url }}" {{ if post.url == url }} aria-current="page"{{ /if }}>
+        {{ post.title || post.url }}
       </a>
     </h2>
 
     {{ include "templates/post-details.vto" {
-      date: post.data.date,
-      tags: post.data.tags,
-      author: post.data.author,
-      readingInfo: post.data.readingInfo
+      date: post.date,
+      tags: post.tags,
+      author: post.author,
+      readingInfo: post.readingInfo
     } }}
   </li>
   {{ /for }}
