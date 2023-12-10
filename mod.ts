@@ -1,11 +1,11 @@
 import plugins, { Options } from "./plugins.ts";
 
-import type { Site } from "lume/core.ts";
+import "lume/types.ts";
 
 export type { Options } from "./plugins.ts";
 
 export default function (options: Partial<Options> = {}) {
-  return (site: Site) => {
+  return (site: Lume.Site) => {
     // Configure the site
     site.use(plugins(options));
 
