@@ -1,11 +1,11 @@
 import plugins, { Options } from "./plugins.ts";
 
-import type { Site } from "lume/core.ts";
+import "lume/types.ts";
 
 export type { Options } from "./plugins.ts";
 
 export default function (options: Partial<Options> = {}) {
-  return (site: Site) => {
+  return (site: Lume.Site) => {
     // Configure the site
     site.use(plugins(options));
 
@@ -35,8 +35,8 @@ export default function (options: Partial<Options> = {}) {
       "_data.yml",
       "_data/i18n.yml",
       "404.md",
-      "archive_result.tmpl.js",
-      "archive.tmpl.js",
+      "archive_result.page.js",
+      "archive.page.js",
       "index.vto",
       "styles.css",
       "favicon.png",
