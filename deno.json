@@ -6,7 +6,6 @@
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s",
-    "reload": "echo \"import 'lume/cli.ts'\" | deno run --reload --unstable -A -",
     "changelog": "deno run --allow-read --allow-write https://deno.land/x/changelog@v2.1.0/bin.ts"
   },
   "compilerOptions": {
