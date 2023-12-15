@@ -26,55 +26,31 @@ site.use(blog());
 export default site;
 ```
 
+To change the blog name, add links to the menu, etc,
+[download the `_data.yml` file](https://github.com/lumeland/theme-simple-blog/blob/main/src/_data.yml)
+into your project and edit it.
+
 ## Customization
 
-You can customize the blog creating the remote files in your local folder. For
-example, to change some style variables, create the file
-`_includes/css/variables.css` file in your local folder and edit the variables
-values:
+This blog uses [lumeland/ds](https://github.com/lumeland/ds) for basic styling.
+To customize the font and colors, you can override the
+[CSS variables defined here](https://github.com/lumeland/ds/blob/main/src/variables.css).
 
-```css
-:root {
-  /* Light colors */
-  color-scheme: light;
-  --color-base: hsl(220, 30%, 10%);
-  --color-text: hsl(220, 30%, 20%);
-  --color-dim: hsl(220, 30%, 40%);
-  --color-link: hsl(220, 30%, 10%);
-  --color-link-hover: hsl(220, 30%, 40%);
-  --color-line: hsl(220, 30%, 90%);
-  --color-background: hsl(220, 30%, 100%);
+Create the `extra_head` variable in your `_data.yml` file. This variable allows
+to add HTML code to the `<head>`, for example:
 
-  /* Fonts */
-  --font-family-code: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
-  --font-family-ui: -apple-system, system-ui, sans-serif;
+```yml
+extra_head: |
+  <style>
+    :root {
+        --color-text: blue;
+    }
+  </style>
+```
 
-  --font-code: 1rem/1.5 var(--font-family-code);
-  --font-display: bold clamp(2rem, 10vw, 4rem)/1 var(--font-family-ui);
-  --font-display-spacing: -0.02em;
-  --font-title: bold clamp(1.5rem, 8vw, 2rem)/1.2 var(--font-family-ui);
-  --font-title-spacing: -0.015em;
-  --font-body: clamp(1rem, 5vw, 1.2rem)/1.5 var(--font-family-ui);
-  --font-body-bold: bold var(--font-body);
-  --font-ui: 1rem/1.4 var(--font-family-ui);
-  --font-small: 0.85rem/1.4 var(--font-family-ui);
+If you prefer an external file, create the css file (for example: `/custom.css`)
+and use the `extra_head` variable to import it:
 
-  /* Space */
-  --row-gap-small: 2.5rem;
-  --row-gap-medium: clamp(2rem, 5vh, 5rem);
-}
-
-/* Dark colors */
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --color-base: hsl(220, 20%, 100%);
-    --color-text: hsl(220, 20%, 80%);
-    --color-dim: hsl(220, 20%, 60%);
-    --color-link: hsl(220, 20%, 100%);
-    --color-link-hover: hsl(220, 20%, 70%);
-    --color-line: hsl(220, 20%, 20%);
-    --color-background: hsl(220, 20%, 10%);
-  }
-}
+```yml
+extra_head: <link rel="stylesheet" href="/custom.css">
 ```
