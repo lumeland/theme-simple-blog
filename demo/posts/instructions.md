@@ -26,11 +26,10 @@ site.use(blog());
 export default site;
 ```
 
-To change the blog name, add links to the menu, etc,
-[download the `_data.yml` file](https://github.com/lumeland/theme-simple-blog/blob/main/src/_data.yml)
-into your project and edit it.
+[Download the `_data.yml` file](https://github.com/lumeland/theme-simple-blog/blob/main/src/_data.yml)
+into your project and change the blog name, add links to the menu, etc.
 
-## Customization
+## Custom styles
 
 This blog uses [lumeland/ds](https://github.com/lumeland/ds) for basic styling.
 To customize the font and colors, you can override the
