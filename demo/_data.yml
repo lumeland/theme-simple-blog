@@ -3,7 +3,7 @@ lang: en
 home:
   welcome: Hello, I am a person that writes stuff.
 
-extra_head: <link rel="stylesheet" href="/vars.css">
+extra_head:
 
 # Metas plugin https://lume.land/plugins/metas/#description
 metas:
