@@ -6,6 +6,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.13.3] - 2023-12-19
+### Fixed
+- Update markdown plugins for Lume 2.
+
 ## [0.13.2] - 2023-12-13
 ### Fixed
 - Break long links [#19].
@@ -174,6 +178,7 @@ First version
 [#17]: https://github.com/lumeland/theme-simple-blog/issues/17
 [#19]: https://github.com/lumeland/theme-simple-blog/issues/19
 
+[0.13.3]: https://github.com/lumeland/theme-simple-blog/compare/v0.13.2...v0.13.3
 [0.13.2]: https://github.com/lumeland/theme-simple-blog/compare/v0.13.1...v0.13.2
 [0.13.1]: https://github.com/lumeland/theme-simple-blog/compare/v0.13.0...v0.13.1
 [0.13.0]: https://github.com/lumeland/theme-simple-blog/compare/v0.12.2...v0.13.0
