@@ -4,6 +4,7 @@ home:
   welcome: Hello, I am a person that writes stuff.
 
 menu_links: []
+extra_head: []
 
 # Metas plugin https://lume.land/plugins/metas/#description
 metas:
