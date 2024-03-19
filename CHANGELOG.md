@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
-## [0.15.0] - Unreleased
+## [0.15.0] - 2024-03-19
 ### Added
 - Theme switcher button.
 - CMS configuration
@@ -17,8 +17,9 @@ project adheres to [Semantic Versioning](http://semver.org/).
   - Improved code color syntax.
   - Fixed pagination layout.
   - Several color and spacing fixes.
+
 ### Removed
-- `/demo` folder. 
+- `/demo` folder.
 
 ## [0.14.0] - 2024-01-08
 ### Added
@@ -197,7 +198,7 @@ First version
 [#17]: https://github.com/lumeland/theme-simple-blog/issues/17
 [#19]: https://github.com/lumeland/theme-simple-blog/issues/19
 
-[0.15.0]: https://github.com/lumeland/theme-simple-blog/compare/v0.14.0...HEAD
+[0.15.0]: https://github.com/lumeland/theme-simple-blog/compare/v0.14.0...v0.15.0
 [0.14.0]: https://github.com/lumeland/theme-simple-blog/compare/v0.13.3...v0.14.0
 [0.13.3]: https://github.com/lumeland/theme-simple-blog/compare/v0.13.2...v0.13.3
 [0.13.2]: https://github.com/lumeland/theme-simple-blog/compare/v0.13.1...v0.13.2
