@@ -10,6 +10,7 @@
   font: var(--font-display);
   letter-spacing: var(--font-display-spacing);
   margin: 0;
+  text-wrap: balance;
 }
 
 .page-navigation {

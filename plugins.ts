@@ -73,7 +73,7 @@ export default function (userOptions?: Options) {
     // Basic CSS Design System
     site.remoteFile(
       "_includes/css/ds.css",
-      "https://unpkg.com/@lumeland/ds@0.3.3/ds.css",
+      "https://unpkg.com/@lumeland/ds@0.5.0/ds.css",
     );
 
     // Mastodon comment system

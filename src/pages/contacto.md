@@ -1,9 +1,10 @@
 ---
 layout: layouts/page.vto
-title: About Me
+title: Contacto
+url: /contact/
 menu:
   visible: true
   order: 2
 ---
 
-This is an example of an about me page.
+Hola

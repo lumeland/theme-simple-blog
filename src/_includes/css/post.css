@@ -5,7 +5,8 @@
 .post-title {
   font: var(--font-display);
   letter-spacing: var(--font-display-spacing);
-  margin: 0 0 0.1em;
+  margin: 0 0 0.2em;
+  text-wrap: balance;
 }
 
 .post-details {
@@ -45,4 +46,10 @@
 
 .post-link {
   display: inline-block;
+}
+
+.post-body {
+  & h2 {
+    text-wrap: balance;
+  }
 }

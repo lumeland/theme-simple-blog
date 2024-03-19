@@ -5,6 +5,7 @@
   row-gap: 1rem;
   justify-content: space-between;
   padding: 2rem min(5vw, 5rem);
+  align-items: center;
 }
 
 .navbar-links {
@@ -15,6 +16,7 @@
   flex-wrap: wrap;
   column-gap: 1.5rem;
   font: var(--font-ui-bold);
+  align-items: center;
 
   & [aria-current="page"] {
     text-decoration: none;

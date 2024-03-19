@@ -1,6 +1,6 @@
 ---
 title: This is my first post
-date: 2018-08-23T10:10:10
+date: '2018-08-23'
 author: Óscar Otero
 tags:
   - Placeholder
@@ -9,7 +9,7 @@ tags:
   - JavaScript
   - TypeScript
 comments:
-  src: https://mastodon.gal/@misteroom/110810445656343599
+  src: 'https://mastodon.gal/@misteroom/110810445656343599'
 ---
 
 Leverage agile frameworks to provide a robust synopsis for high level overviews.
