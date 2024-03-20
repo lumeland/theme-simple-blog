@@ -47,9 +47,3 @@
 .post-link {
   display: inline-block;
 }
-
-.post-body {
-  & h2 {
-    text-wrap: balance;
-  }
-}

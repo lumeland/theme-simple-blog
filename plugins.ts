@@ -14,6 +14,7 @@ import { merge } from "lume/core/utils/object.ts";
 import toc from "https://deno.land/x/lume_markdown_plugins@v0.7.0/toc.ts";
 import image from "https://deno.land/x/lume_markdown_plugins@v0.7.0/image.ts";
 import footnotes from "https://deno.land/x/lume_markdown_plugins@v0.7.0/footnotes.ts";
+import { alert } from "npm:@mdit/plugin-alert@0.8.0";
 
 import "lume/types.ts";
 
@@ -70,10 +71,13 @@ export default function (userOptions?: Options) {
         }
       });
 
+    // Alert plugin
+    site.hooks.addMarkdownItPlugin(alert);
+
     // Basic CSS Design System
     site.remoteFile(
       "_includes/css/ds.css",
-      "https://unpkg.com/@lumeland/ds@0.5.0/ds.css",
+      "https://unpkg.com/@lumeland/ds@0.5.1/ds.css",
     );
 
     // Mastodon comment system
