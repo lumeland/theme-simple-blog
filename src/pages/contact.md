@@ -1,6 +1,6 @@
 ---
 layout: layouts/page.vto
-title: Contacto
+title: Contact
 url: /contact/
 menu:
   visible: true
