@@ -1,5 +1,5 @@
 /* Lume's design system */
-@import "css/ds.css";
+@import "https://unpkg.com/@lumeland/ds@0.5.2/ds.css";
 
 /* Custom components */
 @import "css/navbar.css";

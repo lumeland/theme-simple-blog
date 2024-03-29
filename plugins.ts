@@ -74,12 +74,6 @@ export default function (userOptions?: Options) {
     // Alert plugin
     site.hooks.addMarkdownItPlugin(alert);
 
-    // Basic CSS Design System
-    site.remoteFile(
-      "_includes/css/ds.css",
-      "https://unpkg.com/@lumeland/ds@0.5.1/ds.css",
-    );
-
     // Mastodon comment system
     site.remoteFile(
       "/js/comments.js",

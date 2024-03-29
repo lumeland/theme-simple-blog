@@ -1,7 +1,7 @@
 {
   "imports": {
     "lume/": "https://deno.land/x/lume@v2.1.2/",
-    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.3.7/": "../../cms/"
+    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.3.9/"
   },
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
