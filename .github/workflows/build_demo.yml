@@ -22,19 +22,5 @@ jobs:
         with:
           deno-version: v1.x
 
-      - name: Build site
-        uses: lumeland/build@main
-        with:
-          cmd: deno task build --location=https://lumeland.github.io/theme-simple-blog
-      
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: '_site'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+      - name: Build GitHub Pages with Lume
+        uses: lumeland/build/gh-pages@main
