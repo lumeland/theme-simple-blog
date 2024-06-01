@@ -6,6 +6,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.15.3] - 2024-06-01
+### Added
+- Allow to customize the post URL in the CMS.
+
+### Fixed
+- Comments layout on mobile.
+- Colors of titles
+
 ## [0.15.2] - 2024-03-29
 ### Changed
 - Updated `@lumeland/ds` and import it from unpkg CDN.
@@ -207,6 +215,7 @@ First version
 [#17]: https://github.com/lumeland/theme-simple-blog/issues/17
 [#19]: https://github.com/lumeland/theme-simple-blog/issues/19
 
+[0.15.3]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.2...v0.15.3
 [0.15.2]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.1...v0.15.2
 [0.15.1]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.0...v0.15.1
 [0.15.0]: https://github.com/lumeland/theme-simple-blog/compare/v0.14.0...v0.15.0

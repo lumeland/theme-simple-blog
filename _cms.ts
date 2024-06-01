@@ -1,6 +1,27 @@
 import lumeCMS from "lume/cms/mod.ts";
+import { Field } from "lume/cms/types.ts";
 
 const cms = lumeCMS();
+
+const url: Field = {
+  name: "url",
+  type: "text",
+  description: "The public URL of the page. Leave empty to use the file path.",
+  transform(value) {
+    if (!value) {
+      return;
+    }
+
+    if (!value.endsWith("/")) {
+      value += "/";
+    }
+    if (!value.startsWith("/")) {
+      value = "/" + value;
+    }
+
+    return value;
+  },
+};
 
 cms.document(
   "settings: Global settings for the site",
@@ -66,6 +87,7 @@ cms.collection(
   "src:posts/*.md",
   [
     "title: text",
+    url,
     "date: date",
     {
       name: "draft",
@@ -120,11 +142,7 @@ cms.collection(
       type: "text",
       label: "Title",
     },
-    {
-      name: "url",
-      type: "text",
-      description: "The public URL of the page (must start with /)",
-    },
+    url,
     {
       name: "menu",
       type: "object",

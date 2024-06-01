@@ -10,6 +10,7 @@ tags:
   - TypeScript
 comments:
   src: 'https://mastodon.gal/@misteroom/110810445656343599'
+draft: false
 ---
 
 Leverage agile frameworks to provide a robust synopsis for high level overviews.
