@@ -6,6 +6,7 @@
     font: var(--font-title);
     letter-spacing: var(--font-title-spacing);
     margin: 0;
+    color: var(--color-base);
   }
   & p {
     font: var(--font-ui);
@@ -22,6 +23,16 @@
   border: solid 1px var(--color-line);
   color: var(--color-dim);
   font: var(--font-small);
+  container-type: inline-size;
+
+  @media (max-width: 450px) {
+    margin-left: calc(-15vw / 2);
+    margin-right: calc(-15vw / 2);
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    padding: calc(15vw / 2);
+  }
 
   & a {
     color: currentColor;
@@ -44,14 +55,16 @@
     margin-top: 2em;
     padding-top: 2em;
     border-top: solid 1px var(--color-line);
-
-    @media (min-width: 600px) {
-      margin-left: 64px;
-    }
+    margin-left: var(--indent);
   }
+  > ul {
+    --avatar-size: clamp(32px, 10cqw, 50px);
+    --indent: min(10cqw, var(--avatar-size) + 15px);
+  }
+
   .comment-avatar {
-    width: 50px;
-    height: 50px;
+    width: var(--avatar-size);
+    height: var(--avatar-size);
     border-radius: 6px;
     float: left;
     margin-right: 14px;
@@ -64,8 +77,8 @@
   }
   .comment-author {
     position: absolute;
-    left: 35px;
-    top: 35px;
+    left: calc(var(--avatar-size) - 15px);
+    top: calc(var(--avatar-size) - 15px);
     background: var(--color-highlight);
     border-radius: 50%;
     width: 20px;
@@ -89,13 +102,14 @@
     color: currentColor;
     text-decoration: none;
     display: block;
+    padding-left: var(--indent);
   }
   .comment-address:hover {
     text-decoration: underline;
   }
   .comment-body {
     margin-top: 1em;
-    margin-left: 64px;
+    margin-left: var(--indent);
     line-height: 1.5;
 
     .invisible {

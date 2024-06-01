@@ -26,5 +26,7 @@ export default site;
 
 ## Customization
 
-> [!tip] You can use [lumeCMS](https://lume.land/cms) to customize the blog and
+> [!tip]
+> 
+> You can use [lumeCMS](https://lume.land/cms) to customize the blog and
 > add content easily
