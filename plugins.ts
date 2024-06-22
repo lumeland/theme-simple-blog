@@ -62,6 +62,7 @@ export default function (userOptions?: Options) {
       .copy("fonts")
       .copy("js")
       .copy("favicon.png")
+      .copy("uploads")
       .mergeKey("extra_head", "stringArray")
       .preprocess([".md"], (pages) => {
         for (const page of pages) {
