@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.15.4] - 2024-06-22
+### Fixed
+- Copy the files uploaded by the CMS [#21].
+- Updated deps.
+
 ## [0.15.3] - 2024-06-01
 ### Added
 - Allow to customize the post URL in the CMS.
@@ -214,7 +219,9 @@ First version
 [#16]: https://github.com/lumeland/theme-simple-blog/issues/16
 [#17]: https://github.com/lumeland/theme-simple-blog/issues/17
 [#19]: https://github.com/lumeland/theme-simple-blog/issues/19
+[#21]: https://github.com/lumeland/theme-simple-blog/issues/21
 
+[0.15.4]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.3...v0.15.4
 [0.15.3]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.2...v0.15.3
 [0.15.2]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.1...v0.15.2
 [0.15.1]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.0...v0.15.1

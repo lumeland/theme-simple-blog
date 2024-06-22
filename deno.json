@@ -1,13 +1,13 @@
 {
   "imports": {
     "lume/": "https://deno.land/x/lume@v2.2.2/",
-    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.5.2/"
+    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.5.2/"
   },
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s",
-    "changelog": "deno run --allow-read --allow-write https://deno.land/x/changelog@v2.1.0/bin.ts"
+    "update-deps": "deno run -A --quiet 'https://deno.land/x/nudd@v0.2.4/cli.ts' update plugins.ts deno.json"
   },
   "compilerOptions": {
     "types": [
