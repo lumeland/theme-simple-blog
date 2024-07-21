@@ -16,7 +16,7 @@ export default function* ({ search, paginate, i18n }) {
 
     yield {
       ...data,
-      title: i18n.nav.archive_title
+      title: i18n.nav.archive_title,
     };
   }
 }

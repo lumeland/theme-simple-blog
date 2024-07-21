@@ -6,6 +6,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.15.5] - 2024-07-21
+### Added
+- `target` option to the links in the menu [#23].
+
+### Fixed
+- Allow to translate the title of the Archive pages [#24].
+- TOC i18n is not used in the template [#22].
+- Color of the page titles.
+
 ## [0.15.4] - 2024-06-22
 ### Fixed
 - Copy the files uploaded by the CMS [#21].
@@ -220,7 +229,11 @@ First version
 [#17]: https://github.com/lumeland/theme-simple-blog/issues/17
 [#19]: https://github.com/lumeland/theme-simple-blog/issues/19
 [#21]: https://github.com/lumeland/theme-simple-blog/issues/21
+[#22]: https://github.com/lumeland/theme-simple-blog/issues/22
+[#23]: https://github.com/lumeland/theme-simple-blog/issues/23
+[#24]: https://github.com/lumeland/theme-simple-blog/issues/24
 
+[0.15.5]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.4...v0.15.5
 [0.15.4]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.3...v0.15.4
 [0.15.3]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.2...v0.15.3
 [0.15.2]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.1...v0.15.2
