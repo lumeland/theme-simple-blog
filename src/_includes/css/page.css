@@ -11,6 +11,7 @@
   letter-spacing: var(--font-display-spacing);
   margin: 0;
   text-wrap: balance;
+  color: var(--color-base);
 }
 
 .page-navigation {

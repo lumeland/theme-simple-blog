@@ -38,7 +38,7 @@
       {{ /for }}
       {{- for link of it.menu_links }}
         <li>
-          <a href="{{ link.href }}">
+          <a href="{{ link.href }}"{{ if link.target }} target="{{link.target}}"{{ /if }}>
             {{ link.text }}
           </a>
         </li>

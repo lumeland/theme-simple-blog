@@ -1,7 +1,6 @@
 export const layout = "layouts/archive.vto";
-export const title = "Archive";
 
-export default function* ({ search, paginate }) {
+export default function* ({ search, paginate, i18n }) {
   const posts = search.pages("type=post", "date=desc");
 
   for (
@@ -15,7 +14,10 @@ export default function* ({ search, paginate }) {
       };
     }
 
-    yield data;
+    yield {
+      ...data,
+      title: i18n.nav.archive_title,
+    };
   }
 }
 
