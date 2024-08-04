@@ -28,4 +28,8 @@ main {
 /* Search tweak */
 .search {
   margin-top: var(--row-gap-xsmall);
+
+/* Comments Layout*/
+.comments {
+  display: contents;
 }
