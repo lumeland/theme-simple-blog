@@ -29,7 +29,7 @@ title: Home
     </header>
 
     <div class="post-excerpt body">
-      {{ post.excerpt |> slice(0, 100) |> md }}
+      {{ post.excerpt |> md }}
     </div>
 
     <a href="{{ post.url }}" class="post-link">
