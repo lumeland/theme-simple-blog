@@ -99,8 +99,7 @@ cms.collection(
       name: "tags",
       type: "list",
       label: "Tags",
-      init(field) {
-        const { data } = field.cmsContent;
+      init(field, { data }) {
         field.options = data.site?.search.values("tags");
       },
     },

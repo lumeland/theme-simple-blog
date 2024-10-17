@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.15.6] - 2024-10-17
+### Fixed
+- Updated CMS to the latest version [#27].
+- Updated other dependencies.
+
 ## [0.15.5] - 2024-07-21
 ### Added
 - `target` option to the links in the menu [#23].
@@ -232,7 +237,9 @@ First version
 [#22]: https://github.com/lumeland/theme-simple-blog/issues/22
 [#23]: https://github.com/lumeland/theme-simple-blog/issues/23
 [#24]: https://github.com/lumeland/theme-simple-blog/issues/24
+[#27]: https://github.com/lumeland/theme-simple-blog/issues/27
 
+[0.15.6]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.5...v0.15.6
 [0.15.5]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.4...v0.15.5
 [0.15.4]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.3...v0.15.4
 [0.15.3]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.2...v0.15.3
