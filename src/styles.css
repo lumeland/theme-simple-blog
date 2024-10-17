@@ -14,15 +14,140 @@
   --color-link-hover: var(--color-dim);
 }
 
+img {
+  max-width: 75% !important;
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 1em auto;
+}
+
+.mermaid svg {
+  max-width: 70%;
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 1em auto;
+}
+
+
+/* Light theme background */
+[data-theme="light"] body {
+  background-color: #fafafa; /* Example: white background for light theme */
+}
+
+/* Further light theme settings */
+[data-theme="light"] h1 {
+  font-size: 2.0em;
+  color: #172554; /* Tailwind Blue 950 */
+}
+[data-theme="light"] h2 {
+  font-size: 1.5em;
+  color: #1e3a8a; /* Tailwind Blue 900 */
+}
+[data-theme="light"] h3 {
+  font-size: 1.3em;
+  color: #1e40af; /* Tailwind Blue 800 */
+}
+[data-theme="light"] h4 {
+  font-size: 1.2em;
+  color: #1d4ed8; /* Tailwind Blue 700 */
+}
+[data-theme="light"] h5 {
+  font-size: 1.1em;
+  color: #2563eb; /* Tailwind Blue 600 */
+}
+[data-theme="light"] h6 {
+  font-size: 1.0em;
+  color: #3b82f6; /* Tailwind Blue 500 */
+}
+[data-theme="light"] strong {
+  color: #3b82f6; /* Tailwind Blue 500 */
+}
+
+/* Dark theme background */
+[data-theme="dark"] body {
+  background-color: #262626; /* Example: dark gray background for dark theme */
+}
+
+/* Further light theme settings */
+[data-theme="dark"] h1 {
+  font-size: 2.0em;
+  color: #3b82f6; /* Tailwind Blue 500 */
+}
+[data-theme="dark"] h2 {
+  font-size: 1.5em;
+  color: #60a5fa; /* Tailwind Blue 400 */
+}
+[data-theme="dark"] h3 {
+  font-size: 1.3em;
+  color: #93c5fd; /* Tailwind Blue 300 */
+}
+[data-theme="dark"] h4 {
+  font-size: 1.2em;
+  color: #bfdbfe; /* Tailwind Blue 200 */
+}
+[data-theme="dark"] h5 {
+  font-size: 1.1em;
+  color: #dbeafe; /* Tailwind Blue 100 */
+}
+[data-theme="dark"] h6 {
+  font-size: 1.0em;
+  color: #eff6ff; /* Tailwind Blue 50 */
+}
+[data-theme="dark"] strong {
+  color: #eff6ff; /* Tailwind Blue 50 */
+}
+[data-theme="dark"] p {
+  color: #eff6ff; /* Tailwind Blue 50 */
+}
+
+
+[data-theme="dark"] main blockquote {
+  font-size: 0.95rem;
+  color: white !important;
+}
+
 /* Page layout */
 main {
   padding: var(--row-gap-medium) 0;
+  font-family: 'Roboto', sans-serif;
   max-width: min(100% - 15vw, 45em);
   margin: 0 auto;
 
   & > :first-child {
     margin-top: 0;
   }
+
+
+  /* Responsive iframe */
+  /*Why do you need both of these?*/
+  /*  To maintain the aspect ratio of an iframe video, you'll need to set a fixed height based on the width of the iframe. Since iframes don't inherently maintain aspect ratios like images do with the height: auto approach, a common method is to use a wrapper with a specific aspect ratio.*/
+
+  /*Here’s how you can do it:*/
+
+  /*Wrap the iframe in a div that will maintain the aspect ratio using padding.*/
+  /*Set the iframe to be positioned absolutely within the wrapper.*/
+  /*  Explanation:*/
+  /*          Wrapper Div: The .video-wrapper uses padding-top: 56.25% to maintain a 16:9 aspect ratio (which is commonly used for videos). This percentage is calculated by taking the height divided by the width of the desired aspect ratio (9/16).*/
+  /*Positioning: The iframe is set to position: absolute, which allows it to fill the wrapper completely while maintaining the aspect ratio.*/
+  /*Width and Height: Setting the iframe's width and height to 100% ensures it scales properly within the wrapper.*/
+
+  .iframe-wrapper {
+    position: relative;
+    width: 90%;
+    margin: 1em auto;
+    /* Aspect Ratio 16:9 */
+    padding-top: 56.25%; /* (9 / 16) * 100% */
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Maintain aspect ratio */
+    border: 0; /* Optional: remove border */
+  }
+
 }
 
 /* Search tweak */
