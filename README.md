@@ -43,7 +43,7 @@ export default site;
 ```
 
 Copy the [`_data.yml`](./src/_data.yml) file to your blog root folder and edit
-it with your data to customize the site title, description, and metadata.
+it with your data.
 
 ## Use it as a base template
 
