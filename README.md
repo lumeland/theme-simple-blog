@@ -10,9 +10,9 @@
 ## Set up a new site
 
 The **fastest and easiest** way to configure this theme is the
-[Lume init command](https://deno.land/x/lume_init@v0.2.7), which one can also
-copy easily from the
-[Simple Blog theme page](https://lume.land/theme/simple-blog/). Running:
+[Lume init command](https://deno.land/x/lume_init), which one can also copy
+easily from the [Simple Blog theme page](https://lume.land/theme/simple-blog/).
+Running:
 
 ```bash
 deno run -A https://lume.land/init.ts --theme=simple-blog
