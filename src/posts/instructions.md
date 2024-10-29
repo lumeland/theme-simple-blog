@@ -13,7 +13,7 @@ provides Atom and JSON feeds for your subscribers.
 <!--more-->
 
 The **fastest and easiest** way to configure this theme is the
-[Lume init command](https://deno.land/x/lume_init), which one can also copy
+[Lume init command](https://deno.land/x/lume_init), which you can also copy
 easily from the [Simple Blog theme page](https://lume.land/theme/simple-blog/).
 Running:
 
@@ -53,5 +53,5 @@ file to your blog root folder and edit it with your data.
 
 > [!tip]
 >
-> Use [lumeCMS](https://lume.land/cms) to customize the blog and add content
-> easily
+> You can use [lumeCMS](https://lume.land/cms) to customize the blog and add
+> content easily
