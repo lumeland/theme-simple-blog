@@ -14,7 +14,7 @@ import { merge } from "lume/core/utils/object.ts";
 import toc from "https://deno.land/x/lume_markdown_plugins@v0.7.1/toc.ts";
 import image from "https://deno.land/x/lume_markdown_plugins@v0.7.1/image.ts";
 import footnotes from "https://deno.land/x/lume_markdown_plugins@v0.7.1/footnotes.ts";
-import { alert } from "npm:@mdit/plugin-alert@0.13.1";
+import { alert } from "npm:@mdit/plugin-alert@0.14.0";
 
 import "lume/types.ts";
 
@@ -78,7 +78,7 @@ export default function (userOptions?: Options) {
     // Mastodon comment system
     site.remoteFile(
       "/js/comments.js",
-      "https://cdn.jsdelivr.net/npm/@oom/mastodon-comments@0.3.1/src/comments.js",
+      "https://cdn.jsdelivr.net/npm/@oom/mastodon-comments@0.3.2/src/comments.js",
     );
   };
 }
