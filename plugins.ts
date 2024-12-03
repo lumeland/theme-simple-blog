@@ -78,7 +78,7 @@ export default function (userOptions?: Options) {
     // Mastodon comment system
     site.remoteFile(
       "/js/comments.js",
-      "https://unpkg.com/@oom/mastodon-comments@0.2.2/src/comments.js",
+      "https://cdn.jsdelivr.net/npm/@oom/mastodon-comments@0.3.1/src/comments.js",
     );
   };
 }

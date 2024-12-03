@@ -23,7 +23,6 @@
   border: solid 1px var(--color-line);
   color: var(--color-dim);
   font: var(--font-small);
-  container-type: inline-size;
 
   @media (max-width: 450px) {
     margin-left: calc(-15vw / 2);
@@ -43,6 +42,18 @@
     margin: 0;
     padding: 0;
   }
+
+  & li {
+    container-type: inline-size;
+
+    ul {
+      margin-top: 2em;
+      padding-top: 2em;
+      border-top: solid 1px var(--color-line);
+      margin-left: min(var(--indent), 10cqw);
+    }
+  }
+
   & li + li {
     margin-top: 2em;
     padding-top: 2em;
@@ -51,15 +62,9 @@
   & article {
     max-width: 600px;
   }
-  & ul ul {
-    margin-top: 2em;
-    padding-top: 2em;
-    border-top: solid 1px var(--color-line);
-    margin-left: var(--indent);
-  }
   > ul {
     --avatar-size: clamp(32px, 10cqw, 50px);
-    --indent: min(10cqw, var(--avatar-size) + 15px);
+    --indent: calc(var(--avatar-size) + 15px);
   }
 
   .comment-avatar {
@@ -97,12 +102,22 @@
   }
   .comment-time {
     font-size: small;
+    display: flex;
+    column-gap: .3em;
+    align-items: center;
+
+    svg {
+      width: 1em;
+      height: 1em;
+      fill: currentColor
+    }
   }
   .comment-address {
     color: currentColor;
     text-decoration: none;
     display: block;
     padding-left: var(--indent);
+    margin-top: .2em;
   }
   .comment-address:hover {
     text-decoration: underline;

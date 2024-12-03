@@ -20,4 +20,8 @@ comments:
   title: Comments
   description: |
     You can leave a comment by replying to <a href=":src:">this Mastodon post</a> from your own account on Mastodon or any other ActivityPub-capable social network that can exchange replies with Mastodon.
+  description_bluesky: |
+    You can leave a comment by replying to <a href=":bluesky:">this Bluesky post</a> from your own account.
+  description_all: |
+    You can leave a comment by replying to <a href=":src:">this Mastodon post</a> or <a href=":bluesky:">this Bluesky post</a> from your own account.
   empty: No comments yet

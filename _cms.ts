@@ -109,7 +109,12 @@ cms.collection(
       fields: [
         {
           name: "src",
-          label: "Link to mastodon post",
+          label: "Link to Mastodon post",
+          type: "url",
+        },
+        {
+          name: "bluesky",
+          label: "Link to Bluesky post",
           type: "url",
         },
       ],

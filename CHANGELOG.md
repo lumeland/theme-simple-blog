@@ -6,6 +6,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.15.7] - 2024-12-03
+### Added
+- Comments from Bluesky.
+
+### Fixed
+- Improved comments responsiveness.
+- Title of the 404 page.
+
 ## [0.15.6] - 2024-10-17
 ### Fixed
 - Updated CMS to the latest version [#27].
@@ -239,6 +247,7 @@ First version
 [#24]: https://github.com/lumeland/theme-simple-blog/issues/24
 [#27]: https://github.com/lumeland/theme-simple-blog/issues/27
 
+[0.15.7]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.6...v0.15.7
 [0.15.6]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.5...v0.15.6
 [0.15.5]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.4...v0.15.5
 [0.15.4]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.3...v0.15.4
