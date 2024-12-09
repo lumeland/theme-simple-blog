@@ -9,7 +9,7 @@ bodyClass: body-post
     {{ include "templates/post-details.vto" }}
   </header>
 
-  {{ if toc.length }}
+  {{ if toc?.length }}
   <nav class="toc">
     <h2>{{ i18n.nav.toc }}</h2>
     <ol>
@@ -36,7 +36,7 @@ bodyClass: body-post
     {{ content }}
   </div>
 
-  {{ if it.footnotes.length }}
+  {{ if it.footnotes?.length }}
   <aside role="note" class="footnotes">
     <dl>
       {{ for note of footnotes }}
