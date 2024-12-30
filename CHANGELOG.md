@@ -6,6 +6,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.15.9] - 2024-12-30
+### Fixed
+- HTML tag closed in the wrong place [#34]
+
 ## [0.15.8] - 2024-12-03
 ### Fixed
 - Updated dependencies.
@@ -250,7 +254,9 @@ First version
 [#23]: https://github.com/lumeland/theme-simple-blog/issues/23
 [#24]: https://github.com/lumeland/theme-simple-blog/issues/24
 [#27]: https://github.com/lumeland/theme-simple-blog/issues/27
+[#34]: https://github.com/lumeland/theme-simple-blog/issues/34
 
+[0.15.9]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.8...v0.15.9
 [0.15.8]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.7...v0.15.8
 [0.15.7]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.6...v0.15.7
 [0.15.6]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.5...v0.15.6
