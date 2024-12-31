@@ -13,8 +13,8 @@ post:
   by: by
   reading_time: min read
 search:
-  by_author: Posts by 
-  by_tag: Tagged 
+  by_author: Posts by
+  by_tag: Tagged
   tags: Tags
 comments:
   title: Comments

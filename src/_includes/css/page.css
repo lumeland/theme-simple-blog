@@ -23,13 +23,13 @@
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: .5em;
+    gap: 0.5em;
   }
 
   & h2 {
     font: var(--font-body-bold);
     letter-spacing: var(--font-body-spacing);
-    margin: .5em 0;
+    margin: 0.5em 0;
   }
 }
 

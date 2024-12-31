@@ -11,7 +11,7 @@
   & p {
     font: var(--font-ui);
     color: var(--color-dim);
-    margin: .5em 0;
+    margin: 0.5em 0;
   }
 }
 .comments {
@@ -94,7 +94,7 @@
     text-decoration: underline;
   }
   .comment-username {
-    margin-right: .5em;
+    margin-right: 0.5em;
     color: var(--color-text);
   }
   .comment-useraddress {
@@ -103,13 +103,13 @@
   .comment-time {
     font-size: small;
     display: flex;
-    column-gap: .3em;
+    column-gap: 0.3em;
     align-items: center;
 
     svg {
       width: 1em;
       height: 1em;
-      fill: currentColor
+      fill: currentColor;
     }
   }
   .comment-address {
@@ -117,7 +117,7 @@
     text-decoration: none;
     display: block;
     padding-left: var(--indent);
-    margin-top: .2em;
+    margin-top: 0.2em;
   }
   .comment-address:hover {
     text-decoration: underline;
@@ -157,6 +157,6 @@
   .comment-counts > span {
     display: flex;
     align-items: center;
-    column-gap: .3em;
+    column-gap: 0.3em;
   }
 }

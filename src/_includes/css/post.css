@@ -14,7 +14,7 @@
   display: flex;
   flex-flow: row wrap;
   row-gap: 1em;
-  column-gap: .5em;
+  column-gap: 0.5em;
   align-items: center;
   font: var(--font-small);
   color: var(--color-dim);
@@ -25,12 +25,12 @@
 
   & p:nth-child(-n+2)::after {
     content: "•";
-    padding-left: .5em;
+    padding-left: 0.5em;
     align-self: stretch;
   }
 
   & p:last-of-type {
-    margin-right: .5em;
+    margin-right: 0.5em;
   }
 
   & a {
@@ -41,7 +41,7 @@
 .post-tags {
   display: flex;
   flex-flow: row wrap;
-  gap: .5em;
+  gap: 0.5em;
   align-items: center;
 }
 
