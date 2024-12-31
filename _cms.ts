@@ -88,7 +88,13 @@ cms.collection(
   [
     "title: text",
     url,
-    "author: text",
+    {
+      name: "author",
+      type: "text",
+      init(field, { data }) {
+        field.options = data.site?.search.values("author");
+      },
+    },
     "date: date",
     {
       name: "draft",
