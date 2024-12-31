@@ -88,6 +88,7 @@ cms.collection(
   [
     "title: text",
     url,
+    "author: text",
     "date: date",
     {
       name: "draft",
