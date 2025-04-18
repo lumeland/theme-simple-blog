@@ -11,10 +11,10 @@ import sitemap from "lume/plugins/sitemap.ts";
 import feed, { Options as FeedOptions } from "lume/plugins/feed.ts";
 import readingInfo from "lume/plugins/reading_info.ts";
 import { merge } from "lume/core/utils/object.ts";
-import toc from "https://deno.land/x/lume_markdown_plugins@v0.8.0/toc.ts";
-import image from "https://deno.land/x/lume_markdown_plugins@v0.8.0/image.ts";
-import footnotes from "https://deno.land/x/lume_markdown_plugins@v0.8.0/footnotes.ts";
-import { alert } from "npm:@mdit/plugin-alert@0.14.0";
+import toc from "https://deno.land/x/lume_markdown_plugins@v0.9.0/toc.ts";
+import image from "https://deno.land/x/lume_markdown_plugins@v0.9.0/image.ts";
+import footnotes from "https://deno.land/x/lume_markdown_plugins@v0.9.0/footnotes.ts";
+import { alert } from "npm:@mdit/plugin-alert@0.16.0";
 
 import "lume/types.ts";
 
@@ -44,7 +44,8 @@ export default function (userOptions?: Options) {
   const options = merge(defaults, userOptions);
 
   return (site: Lume.Site) => {
-    site.use(postcss())
+    site
+      .use(postcss())
       .use(basePath())
       .use(toc())
       .use(prism(options.prism))
@@ -58,20 +59,17 @@ export default function (userOptions?: Options) {
       .use(terser())
       .use(pagefind(options.pagefind))
       .use(sitemap())
-      .use(feed(options.feed))
-      .add("fonts")
-      .add([".css"])
-      .add("js")
-      .add("favicon.png")
-      .add("uploads")
-      .mergeKey("extra_head", "stringArray")
-      .preprocess([".md"], (pages) => {
-        for (const page of pages) {
-          page.data.excerpt ??= (page.data.content as string).split(
-            /<!--\s*more\s*-->/i,
-          )[0];
-        }
-      });
+      .use(feed(options.feed));
+
+    site.mergeKey("extra_head", "stringArray");
+    
+    site.preprocess([".md"], (pages) => {
+      for (const page of pages) {
+        page.data.excerpt ??= (page.data.content as string).split(
+          /<!--\s*more\s*-->/i,
+        )[0];
+      }
+    });
 
     // Alert plugin
     site.hooks.addMarkdownItPlugin(alert);
