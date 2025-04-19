@@ -23,7 +23,7 @@
     margin: 0;
   }
 
-  & p:nth-child(-n+2)::after {
+  & p::after {
     content: "•";
     padding-left: 0.5em;
     align-self: stretch;
@@ -31,6 +31,10 @@
 
   & p:last-of-type {
     margin-right: 0.5em;
+
+    &::after {
+      display: none;
+    }
   }
 
   & a {
