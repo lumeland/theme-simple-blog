@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.15.11] - 2025-04-22
+### Fixed
+- CSS for posts without author or tags.
+- Updated dependencies [#36].
+
 ## [0.15.10] - 2024-12-31
 ### Added
 - Author field to CMS [#35].
@@ -260,7 +265,9 @@ First version
 [#27]: https://github.com/lumeland/theme-simple-blog/issues/27
 [#34]: https://github.com/lumeland/theme-simple-blog/issues/34
 [#35]: https://github.com/lumeland/theme-simple-blog/issues/35
+[#36]: https://github.com/lumeland/theme-simple-blog/issues/36
 
+[0.15.11]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.10...v0.15.11
 [0.15.10]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.9...v0.15.10
 [0.15.9]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.8...v0.15.9
 [0.15.8]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.7...v0.15.8
