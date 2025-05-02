@@ -8,11 +8,7 @@
     {{ /if }}
   {{ /if }}
 
-  <p>
-    <time datetime="{{ date |> date('DATETIME') }}">
-      {{ date |> date('HUMAN_DATE') }}
-    </time>
-  </p>
+  <p><time datetime="{{ date |> date('DATETIME') }}">{{ date |> date('HUMAN_DATE') }}</time></p>
 
   <p>{{ it.readingInfo.minutes }} {{ i18n.post.reading_time}}</p>
 
