@@ -1,0 +1,21 @@
+{{ if pagination.totalPages !== 1 }}
+<nav class="page-pagination pagination">
+  <ul>
+    {{- if pagination.previous }}
+    <li class="pagination-prev">
+      <a href="{{ pagination.previous }}" rel="prev">{{ i18n.nav.previous }}</a>
+    </li>
+    {{ /if }}
+
+    <li class="pagination-page">
+      {{ i18n.nav.page }} {{ pagination.page }}
+    </li>
+
+    {{- if pagination.next }}
+    <li class="pagination-next">
+      <a href="{{ pagination.next }}" rel="next">{{ i18n.nav.next }}</a>
+    </li>
+    {{ /if }}
+  </ul>
+</nav>
+{{ /if }}

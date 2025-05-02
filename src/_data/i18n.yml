@@ -16,6 +16,7 @@ search:
   by_author: Posts by
   by_tag: Tagged
   tags: Tags
+  authors: Authors
 comments:
   title: Comments
   description: |

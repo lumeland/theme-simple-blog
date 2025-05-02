@@ -7,6 +7,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.16.0] - Unreleased
+### Added
+- Paginate the post of a tag
+- Authors in the archive page (only if more than 1 author is found).
+
 ### Changed
 - Upgrade to Lume 3.
 

@@ -16,7 +16,20 @@ bodyClass: body-tag
 </header>
 
 {{ if pagination.page === 1 }}
-{{ set pageTags = search.pages("type=tag", "tag") }}
+{{ set pageAuthors = search.pages("type=author pagination.page=1", "author") }}
+{{ if pageAuthors.length > 1 }}
+<nav class="page-navigation">
+  <h2>{{ i18n.search.authors }}:</h2>
+  
+  <ul class="page-navigation-tags">
+  {{ for page of pageAuthors }}
+    <li><a href="{{ page.url }}" class="badge">{{ page.author }}</a></li>
+  {{ /for }}
+  </ul>
+</nav>
+{{ /if }}
+
+{{ set pageTags = search.pages("type=tag pagination.page=1", "tag") }}
 {{ if pageTags.length }}
 <nav class="page-navigation">
   <h2>{{ i18n.search.tags }}:</h2>
@@ -31,25 +44,4 @@ bodyClass: body-tag
 {{ /if }}
 
 {{ include "templates/post-list.vto" { postslist: results } }}
-
-{{ if pagination.totalPages !== 1 }}
-<nav class="page-pagination pagination">
-  <ul>
-    {{- if pagination.previous }}
-    <li class="pagination-prev">
-      <a href="{{ pagination.previous }}" rel="prev">{{ i18n.nav.previous }}</a>
-    </li>
-    {{ /if }}
-
-    <li class="pagination-page">
-      {{ i18n.nav.page }} {{ pagination.page }}
-    </li>
-
-    {{- if pagination.next }}
-    <li class="pagination-next">
-      <a href="{{ pagination.next }}" rel="next">{{ i18n.nav.next }}</a>
-    </li>
-    {{ /if }}
-  </ul>
-</nav>
-{{ /if }}
+{{ include "templates/pagination.vto" }}

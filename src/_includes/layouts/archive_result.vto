@@ -7,4 +7,5 @@ bodyClass: body-tag
   <h1 class="page-title">{{ title }}</h1>
 </header>
 
-{{ include "templates/post-list.vto" { postslist: search.pages(search_query) } }}
+{{ include "templates/post-list.vto" { postslist: results } }}
+{{ include "templates/pagination.vto" }}

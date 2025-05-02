@@ -1,25 +1,34 @@
 export const layout = "layouts/archive_result.vto";
 
-export default function* ({ search, i18n }) {
+export default function* ({ search, i18n, paginate }) {
   // Generate a page for each tag
   for (const tag of search.values("tags")) {
-    yield {
-      url: `/archive/${tag}/`,
-      title: `${i18n.search.by_tag}  “${tag}”`,
-      type: "tag",
-      search_query: `type=post '${tag}'`,
-      tag,
-    };
+    const url = (n) => (n === 1) ? `/archive/${tag}/` : `/archive/${tag}/${n}/`;
+    const pages = search.pages(`type=post '${tag}'`);
+
+    for (const page of paginate(pages, { url, size: 10 })) {
+      yield {
+        ...page,
+        title: `${i18n.search.by_tag}  “${tag}”`,
+        type: "tag",
+        tag,
+      };
+    }
   }
 
   // Generate a page for each author
   for (const author of search.values("author")) {
-    yield {
-      url: `/author/${author}/`,
-      title: `${i18n.search.by_author} ${author}`,
-      type: "author",
-      search_query: `type=post author='${author}'`,
-      author,
-    };
+    const url = (n) =>
+      (n === 1) ? `/author/${author}/` : `/archive/${author}/${n}/`;
+    const pages = search.pages(`type=post author='${author}'`);
+
+    for (const page of paginate(pages, { url, size: 10 })) {
+      yield {
+        ...page,
+        title: `${i18n.search.by_author} ${author}`,
+        type: "author",
+        author,
+      };
+    }
   }
 }
