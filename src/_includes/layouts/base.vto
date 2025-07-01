@@ -38,8 +38,8 @@
       {{ /for }}
       {{- for link of it.menu_links }}
         <li>
-          <a href="{{ link.href }}"{{ if link.target }} target="{{link.target}}"{{ /if }}>
-            {{ link.text }}
+          <a href="{{ link.url }}"{{ if link.target }} target="{{link.target}}"{{ /if }}>
+            {{ link.title }}
           </a>
         </li>
       {{ /for }}
