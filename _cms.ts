@@ -49,12 +49,12 @@ cms.document(
       type: "object-list",
       fields: [
         {
-          name: "title",
+          name: "text",
           type: "text",
           label: "Title",
         },
         {
-          name: "url",
+          name: "href",
           type: "text",
           label: "URL",
         },
