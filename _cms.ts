@@ -1,9 +1,8 @@
 import lumeCMS from "lume/cms/mod.ts";
-import { Field } from "lume/cms/types.ts";
 
 const cms = lumeCMS();
 
-const url: Field = {
+const url: Lume.CMS.Field = {
   name: "url",
   type: "text",
   description: "The public URL of the page. Leave empty to use the file path.",
@@ -23,10 +22,12 @@ const url: Field = {
   },
 };
 
-cms.document(
-  "settings: Global settings for the site",
-  "src:_data.yml",
-  [
+cms.document({
+  name: "settings",
+  description: "Global settings for the site.",
+  store: "src:_data.yml",
+  url: "/",
+  fields: [
     {
       name: "lang",
       type: "text",
@@ -80,7 +81,7 @@ cms.document(
       ],
     },
   ],
-);
+});
 
 cms.collection(
   "posts: Blog posts",
