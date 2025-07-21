@@ -1,6 +1,6 @@
 <div class="post-details">
   {{ if author }}
-    {{ set page = search.page(`type=author author="author"`) }}
+    {{ set page = search.page(`type=author author="${author}"`) }}
     {{ if page }}
       <p>{{ i18n.post.by}} <a data-pagefind-filter="author" href="{{ page.url }}">{{ author }}</a></p>
     {{ else }}
