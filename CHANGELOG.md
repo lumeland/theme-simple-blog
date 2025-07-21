@@ -6,6 +6,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.16.2] - 2025-07-21
+### Fixed
+- Search by author [#40]
+
 ## [0.16.1] - 2025-07-03
 ### Fixed
 - menu_links added through the CMS [#39]
@@ -274,7 +278,9 @@ First version
 [#34]: https://github.com/lumeland/theme-simple-blog/issues/34
 [#35]: https://github.com/lumeland/theme-simple-blog/issues/35
 [#39]: https://github.com/lumeland/theme-simple-blog/issues/39
+[#40]: https://github.com/lumeland/theme-simple-blog/issues/40
 
+[1.16.2]: https://github.com/lumeland/theme-simple-blog/compare/v0.16.1...v1.16.2
 [0.16.1]: https://github.com/lumeland/theme-simple-blog/compare/v0.16.0...v0.16.1
 [0.16.0]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.10...v0.16.0
 [0.15.10]: https://github.com/lumeland/theme-simple-blog/compare/v0.15.9...v0.15.10
