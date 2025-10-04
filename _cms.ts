@@ -96,7 +96,7 @@ cms.collection(
         field.options = data.site?.search.values("author");
       },
     },
-    "date: date",
+    "date: datetime",
     {
       name: "draft",
       label: "Draft",
