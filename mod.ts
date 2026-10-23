@@ -13,10 +13,10 @@ import sitemap from "@lumeland/plugin-sitemap";
 import feed, { type Options as FeedOptions } from "@lumeland/plugin-feed";
 import readingInfo from "@lumeland/plugin-reading-info";
 import { merge } from "@lumeland/core/utils/object.ts";
+import toc from "@lumeland/plugin-toc";
 import lumeCms from "@lumeland/plugin-cms";
 import cms from "./cms.ts";
 
-// import toc from "https://deno.land/x/lume_markdown_plugins@v0.9.0/toc.ts";
 // import image from "https://deno.land/x/lume_markdown_plugins@v0.9.0/image.ts";
 // import footnotes from "https://deno.land/x/lume_markdown_plugins@v0.9.0/footnotes.ts";
 import { alert } from "@mdit/plugin-alert";
@@ -49,7 +49,7 @@ export default function (userOptions?: Options) {
   return (site: Lume.Site) => {
     site
       .use(basePath())
-      // .use(toc())
+      .use(toc())
       .use(prism(options.prism))
       .use(readingInfo())
       .use(date(options.date))

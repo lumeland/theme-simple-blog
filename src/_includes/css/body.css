@@ -40,6 +40,33 @@
     color: var(--color-base);
   }
 
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    a {
+      color: var(--color-base);
+      position: relative;
+      text-decoration: none;
+
+      &::before {
+        content: "#";
+        display: inline-block;
+        position: absolute;
+        left: -1.5ch;
+        font-weight: normal;
+        color: var(--color-dim);
+        visibility: hidden;
+      }
+
+      &:hover::before {
+        visibility: visible;
+      }
+    }
+  }
+
   /** Tables */
   table {
     width: 100%;

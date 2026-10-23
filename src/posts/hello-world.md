@@ -14,10 +14,17 @@ provides Atom and JSON feeds for your subscribers.
 
 <!--more-->
 
-The **fastest and easiest** way to configure this theme is running the command
-`npm create lume --theme=@lumeland/theme-simple-blog`.
+## Install
+
+The **fastest and easiest** way to configure this theme is running the command:
+
+```
+npm create lume -- --theme @lumeland/theme-simple-blog
+```
 
 It will create a new project with Simple Blog configured that you can see at `http://localhost:3000`.
+
+## Edit content
 
 Visit `http://localhost:3000/admin` to edit the blog content easily from you browser.
 
