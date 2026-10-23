@@ -1,48 +1,106 @@
-import plugins, { Options } from "./plugins.ts";
+import { getFiles } from "@lumeland/core/utils/cdn.ts";
+import type { Archetype } from "@lumeland/core/archetypes.ts";
+import date, { type Options as DateOptions } from "@lumeland/plugin-date";
+import lightningcss from "@lumeland/plugin-lightningcss";
+import terser from "@lumeland/plugin-terser";
+import prism, { type Options as PrismOptions } from "@lumeland/plugin-prism";
+import basePath from "@lumeland/plugin-base-path";
+import slugifyUrls from "@lumeland/plugin-slugify-urls";
+import resolveUrls from "@lumeland/plugin-resolve-urls";
+import metas from "@lumeland/plugin-metas";
+import pagefind, { type Options as PagefindOptions } from "@lumeland/plugin-pagefind";
+import sitemap from "@lumeland/plugin-sitemap";
+import feed, { type Options as FeedOptions } from "@lumeland/plugin-feed";
+import readingInfo from "@lumeland/plugin-reading-info";
+import { merge } from "@lumeland/core/utils/object.ts";
+import lumeCms from "@lumeland/plugin-cms";
+import cms from "./cms.ts";
 
-import "lume/types.ts";
+// import toc from "https://deno.land/x/lume_markdown_plugins@v0.9.0/toc.ts";
+// import image from "https://deno.land/x/lume_markdown_plugins@v0.9.0/image.ts";
+// import footnotes from "https://deno.land/x/lume_markdown_plugins@v0.9.0/footnotes.ts";
+import { alert } from "@mdit/plugin-alert";
 
-export type { Options } from "./plugins.ts";
+export interface Options {
+  prism?: Partial<PrismOptions>;
+  date?: Partial<DateOptions>;
+  pagefind?: Partial<PagefindOptions>;
+  feed?: Partial<FeedOptions>;
+}
 
-export default function (options: Partial<Options> = {}) {
+export const defaults: Options = {
+  feed: {
+    output: ["/feed.xml", "/feed.json"],
+    query: "type=post",
+    info: {
+      title: "=metas.site",
+      description: "=metas.description",
+    },
+    items: {
+      title: "=title",
+    },
+  },
+};
+
+/** Configure the site */
+export default function (userOptions?: Options) {
+  const options = merge(defaults, userOptions);
+
   return (site: Lume.Site) => {
-    // Configure the site
-    site.use(plugins(options));
+    site
+      .use(basePath())
+      // .use(toc())
+      .use(prism(options.prism))
+      .use(readingInfo())
+      .use(date(options.date))
+      .use(metas())
+      .use(lumeCms({ cms }))
+      // .use(image())
+      // .use(footnotes())
+      .use(resolveUrls())
+      .use(slugifyUrls())
+      .use(pagefind({
+        componentUI: {
+          placeholder: "/** pagefind */"
+        }
+      }))
+      .use(terser())
+      .use(lightningcss())
+      .use(sitemap())
+      .use(feed(options.feed))
+      .add("fonts")
+      .add([".css"])
+      .add("js")
+      .add("favicon.png")
+      .add("uploads")
+      .mergeKey("extra_head", "stringArray")
+      .preprocess([".md"], (pages) => {
+        for (const page of pages) {
+          page.data.excerpt ??= (page.data.content as string).split(/<!--\s*more\s*-->/i)[0];
+        }
+      });
 
-    // Add remote files
-    const files = [
-      "_includes/css/fonts.css",
-      "_includes/css/navbar.css",
-      "_includes/css/page.css",
-      "_includes/css/post-list.css",
-      "_includes/css/post.css",
-      "_includes/css/reset.css",
-      "_includes/css/badge.css",
-      "_includes/css/variables.css",
-      "_includes/css/search.css",
-      "_includes/css/comments.css",
-      "_includes/layouts/archive_result.vto",
-      "_includes/layouts/archive.vto",
-      "_includes/layouts/base.vto",
-      "_includes/layouts/page.vto",
-      "_includes/layouts/post.vto",
-      "_includes/templates/pagination.vto",
-      "_includes/templates/post-details.vto",
-      "_includes/templates/post-list.vto",
-      "posts/_data.yml",
-      "_data.yml",
-      "_data/i18n.yml",
-      "404.md",
-      "archive_result.page.js",
-      "archive.page.js",
-      "index.vto",
-      "styles.css",
-      "favicon.png",
-      "js/main.js",
-    ];
+    // Alert plugin
+    site.hooks.addMarkdownItPlugin(alert);
 
-    for (const file of files) {
-      site.remoteFile(file, import.meta.resolve(`./src/${file}`));
-    }
+    // Mastodon comment system
+    site.remoteFile("/js/comments.js", "npm:@oom/mastodon-comments@0.3.2/src/comments.js");
+
+    // Remote files
+    const files = ["_includes/**", "_data/**", "**/_data.yml", "js/**", "*.{md,js,vto,css,png}"];
+    site.remote("/", import.meta.resolve("./src"), files);
   };
+}
+
+export const setup: Archetype = async function * () {
+  const specifier = import.meta.resolve("./src");
+  const patterns = ["/_data.yml", "/404.md", "/favicon.png", "/posts/*.md"];
+
+  for (const [path, url] of await getFiles(specifier, patterns)) {
+    yield {
+      path,
+      overwrite: true,
+      content: new URL(url),
+    }
+  }
 }

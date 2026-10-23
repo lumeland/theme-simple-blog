@@ -9,6 +9,9 @@ nav:
   page: Page
   next: Next →
   previous: ← Previous
+footer:
+  theme_button: Switch light/dark mode
+  text: Powered by <a href="https://lume.land">Lume + Simple Theme</a>
 post:
   by: by
   reading_time: min read

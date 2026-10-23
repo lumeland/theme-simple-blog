@@ -1,0 +1,10 @@
+{
+  "name": "Simple Blog",
+  "author": {
+    "name": "Óscar Otero",
+    "url": "https://oscarotero.com"
+  },
+  "repo": "https://github.com/lumeland/theme-simple-blog",
+  "demo": "https://lumeland.github.io/theme-simple-blog/",
+  "files": ["/src/_data.yml", "/src/404.md", "/src/favicon.png", "/src/posts/instructions.md"]
+}

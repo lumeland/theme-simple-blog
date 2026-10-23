@@ -1,0 +1,171 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 120px;
+  scroll-behavior: smooth;
+  text-rendering: auto;
+  overflow-wrap: break-word;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+}
+
+html,
+body {
+  font: var(--font-ui);
+  color: var(--color-base);
+  background-color: var(--color-background);
+  overflow-wrap: break-word;
+  margin: 0;
+}
+
+:focus {
+  z-index: 1;
+}
+
+:focus-visible {
+  outline-width: 1px;
+  outline-offset: 2px;
+  outline-style: solid;
+  outline-color: currentColor;
+}
+
+main {
+  & > :first-child {
+    margin-top: 0;
+  }
+}
+
+a {
+  color: var(--color-link);
+
+  &:hover {
+    text-decoration: none;
+    color: var(--color-link-hover);
+  }
+}
+
+table {
+  margin: 1em 0;
+  border-color: currentcolor;
+
+  & td,
+  & th {
+    padding-right: 1em;
+  }
+}
+
+samp,
+kbd,
+pre,
+code {
+  font: var(--font-code);
+  letter-spacing: 0;
+  font-variant-ligatures: none;
+}
+
+pre {
+  overflow-x: auto;
+}
+
+small {
+  font-size: 80%;
+}
+
+:not(pre) > code {
+  background: var(--color-highlight);
+  padding: 0 0.2rem;
+  border-radius: 4px;
+  font-size: 0.95em;
+  letter-spacing: inherit;
+  color: var(--color-text);
+}
+
+:focus {
+  z-index: 1;
+}
+
+:focus-visible {
+  outline-width: 1px;
+  outline-offset: 2px;
+  outline-style: solid;
+  outline-color: var(--color-line);
+}
+
+hr {
+  color: var(--color-line);
+  margin: var(--row-gap-medium) 0;
+  border: none;
+  border-top: solid 1px;
+  background: none;
+}
+
+h1, h2, h3, h4, h5, h6, strong, b {
+  font-weight: var(--font-bold);
+  color: var(--color-text);
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  appearance: button;
+}
+
+[type="search"] {
+  appearance: textfield;
+}
+::-webkit-search-decoration {
+  appearance: none;
+}
+
+legend {
+  padding: 0;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+summary {
+  display: list-item;
+}

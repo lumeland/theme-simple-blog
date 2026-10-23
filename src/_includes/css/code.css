@@ -1,0 +1,90 @@
+code[class*="language-"],
+pre[class*="language-"] {
+  font: var(--font-code);
+  color: var(--code-text);
+  border-radius: var(--border-radius);
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  tab-size: 4;
+  hyphens: none;
+
+  &::selection,
+  & ::selection {
+    background: var(--code-background-selection);
+  }
+}
+pre[class*="language-"] {
+  background: var(--code-background);
+  border: 1px solid var(--code-border);
+  margin: 0.5em 0;
+  overflow: auto;
+  padding: 1em;
+}
+
+:not(pre) > code[class*="language-"] {
+  background: var(--code-background);
+  border: 1px solid var(--code-border);
+  padding: 0.15em 0.2em 0.05em;
+}
+.token.punctuation,
+.namespace {
+  opacity: 0.7;
+}
+.token {
+  position: relative;
+  z-index: 1;
+
+  &.important,
+  &.bold {
+    font-weight: bold;
+  }
+  &.italic {
+    font-style: italic;
+  }
+  &.entity {
+    cursor: help;
+  }
+  &.comment,
+  &.prolog,
+  &.doctype,
+  &.cdata {
+    color: var(--code-comment);
+  }
+  &.keyword,
+  &.property,
+  &.selector,
+  &.constant,
+  &.symbol,
+  &.builtin {
+    color: var(--code-token-1);
+  }
+  &.tag,
+  &.boolean,
+  &.number {
+    color: var(--code-token-2);
+  }
+  &.deleted {
+    color: var(--code-deleted);
+  }
+  &.inserted {
+    color: var(--code-inserted);
+  }
+  &.attr-value,
+  &.string,
+  &.char,
+  &.operator,
+  &.entity,
+  &.url,
+  &.variable {
+    color: var(--code-token-3);
+  }
+  &.attr-name,
+  &.atrule,
+  &.regex,
+  &.important {
+    color: var(--code-token-4);
+  }
+}

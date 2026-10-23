@@ -1,0 +1,182 @@
+import createCms from "@lumeland/cms";
+
+const cms = createCms();
+
+const url: Lume.CMS.Field = {
+  name: "url",
+  type: "text",
+  description: "The public URL of the page. Leave empty to use the file path.",
+  transform(value: string) {
+    if (!value) {
+      return;
+    }
+
+    if (!value.endsWith("/")) {
+      value += "/";
+    }
+    if (!value.startsWith("/")) {
+      value = "/" + value;
+    }
+
+    return value;
+  },
+};
+
+cms.document({
+  name: "settings",
+  description: "Global settings for the site.",
+  store: "src:_data.yml",
+  previewUrl: () => "/",
+  fields: [
+    {
+      name: "lang",
+      type: "text",
+      label: "Language",
+    },
+    {
+      name: "home",
+      type: "object",
+      fields: [
+        {
+          name: "welcome",
+          type: "text",
+          label: "Title",
+          description: "Welcome message in the homepage",
+        },
+      ],
+    },
+    {
+      name: "menu_links",
+      type: "object-list",
+      fields: [
+        {
+          name: "text",
+          type: "text",
+          label: "Title",
+        },
+        {
+          name: "href",
+          type: "text",
+          label: "URL",
+        },
+      ],
+    },
+    {
+      name: "extra_head",
+      type: "code",
+      description: "Extra content to include in the <head> tag",
+    },
+    {
+      name: "metas",
+      type: "object",
+      description: "Meta tags configuration.",
+      fields: [
+        "site: text",
+        "description: text",
+        "title: text",
+        "image: text",
+        "twitter: text",
+        "lang: text",
+        "generator: checkbox",
+      ],
+    },
+  ],
+});
+
+cms.collection("posts: Blog posts", "src:posts/**/*.md", [
+  "title: text",
+  url,
+  {
+    name: "author",
+    type: "text",
+    init(field: Lume.CMS.Field["text"], { data }: any) {
+      field.options = data.site?.search.values("author");
+    },
+  },
+  "date: date",
+  {
+    name: "draft",
+    label: "Draft",
+    type: "checkbox",
+    description: "If checked, the post will not be published.",
+  },
+  {
+    name: "tags",
+    type: "list",
+    label: "Tags",
+    init(field: Lume.CMS.Field["list"], { data }: any) {
+      field.options = data.site?.search.values("tags");
+    },
+  },
+  {
+    name: "comments",
+    type: "object",
+    fields: [
+      {
+        name: "src",
+        label: "Link to Mastodon post",
+        type: "url",
+      },
+      {
+        name: "bluesky",
+        label: "Link to Bluesky post",
+        type: "url",
+      },
+    ],
+  },
+  {
+    name: "extra_head",
+    type: "code",
+    description: "Extra content to include in the <head> tag",
+  },
+  {
+    name: "content",
+    type: "markdown",
+    label: "Content",
+  },
+]);
+
+cms.collection("pages: Additional pages, like about, contact, etc.", "src:pages/*.md", [
+  {
+    name: "layout",
+    type: "hidden",
+    value: "layouts/page.vto",
+  },
+  {
+    name: "title",
+    type: "text",
+    label: "Title",
+  },
+  url,
+  {
+    name: "menu",
+    type: "object",
+    label: "Whether to include in the menu",
+    fields: [
+      {
+        name: "visible",
+        type: "checkbox",
+        label: "Show in menu",
+      },
+      {
+        name: "order",
+        type: "number",
+        label: "Order",
+      },
+    ],
+  },
+  {
+    name: "extra_head",
+    type: "code",
+    description: "Extra content to include in the <head> tag",
+  },
+  {
+    name: "content",
+    type: "markdown",
+    label: "Content",
+  },
+]);
+
+cms.upload("uploads: Uploaded files", "src:uploads");
+
+export default cms;

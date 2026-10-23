@@ -34,6 +34,6 @@
 }
 
 .page-pagination {
-  border-top: solid 1px var(--color-line);
-  margin-top: var(--row-gap-medium);
+  border-block: solid 1px var(--color-line);
+  margin-block: var(--row-gap-medium);
 }

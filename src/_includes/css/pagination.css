@@ -1,0 +1,51 @@
+.pagination {
+  & ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2rem;
+
+    &:has(.pagination-page) {
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    }
+  }
+
+  & a {
+    display: block;
+    text-decoration: none;
+    color: var(--color-dim);
+
+    &:hover strong {
+      text-decoration: underline;
+    }
+  }
+
+  & strong {
+    color: var(--color-base);
+    display: block;
+  }
+}
+
+.pagination-prev {
+  text-align: left;
+  grid-column: 1;
+}
+
+.pagination-page {
+  text-align: center;
+  grid-column: 2;
+}
+
+.pagination-next {
+  text-align: right;
+  grid-column: -2;
+}
+
+@media only screen and (max-width: 576px) {
+  .pagination {
+    & strong {
+      display: none;
+    }
+  }
+}

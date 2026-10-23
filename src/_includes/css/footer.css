@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: .5em;
+  color: var(--color-dim);
+
+  a {
+    color: inherit;
+  }
+
+  p {
+    font: var(--font-small);
+  }
+}

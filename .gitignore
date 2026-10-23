@@ -1,6 +1,1 @@
-posts/*.md
-src/uploads
-_site
-_bin
-deno.lock
-src/posts/posts
+node_modules

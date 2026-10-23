@@ -10,12 +10,25 @@
     <meta name="theme-color" content="hsl(220, 20%, 100%)" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="hsl(220, 20%, 10%)" media="(prefers-color-scheme: dark)">
     
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ metas.site }}">
     <link rel="alternate" href="/feed.json" type="application/json" title="{{ metas.site }}">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
     <link rel="canonical" href="{{ url |> url(true) }}">
-    <script src="/js/main.js" type="module"></script>
+    <script src="/script.js" type="module"></script>
+    <script>
+      let theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light");
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.setAttribute("data-pf-theme", theme);
+      function changeTheme() {
+        theme = theme === "dark" ? "light" : "dark";
+        localStorage.setItem("theme", theme);
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.setAttribute("data-pf-theme", theme);
+      }
+    </script>
     {{ it.extra_head?.join("\n") }}
   </head>
   <body>
@@ -43,29 +56,23 @@
           </a>
         </li>
       {{ /for }}
-      <li>
-        <script>
-          let theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light");
-          document.documentElement.dataset.theme = theme;
-          function changeTheme() {
-            theme = theme === "dark" ? "light" : "dark";
-            localStorage.setItem("theme", theme);
-            document.documentElement.dataset.theme = theme;
-          }
-        </script>
-        <button class="button" onclick="changeTheme()">
-          <span class="icon">◐</span>
-        </button>
-      </li>
       </ul>
+
+      <div class="navbar-search">
+        <pagefind-modal-trigger></pagefind-modal-trigger>
+        <pagefind-modal></pagefind-modal>
+      </div>
     </nav>
 
     <main class="{{ it.bodyClass }}">
       {{ content }}
     </main>
 
-    <!-- Current page: {{ url }} -->
+    <footer class="footer">
+      <button class="button" onclick="changeTheme()" title="{{ i18n.footer.theme_button }}">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24M40 128a88.1 88.1 0 0 1 88-88v176a88.1 88.1 0 0 1-88-88"/></svg>
+      </button>
+      <p>{{ i18n.footer.text }}</p>
+    </footer>
   </body>
 </html>

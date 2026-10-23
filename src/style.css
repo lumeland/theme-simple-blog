@@ -1,0 +1,46 @@
+@import "css/reset.css" layer(base);
+@import "css/variables.css" layer(base);
+
+@import "css/badge.css" layer(components);
+@import "css/blockquote.css" layer(components);
+@import "css/body.css" layer(components);
+@import "css/breadcrumb.css" layer(components);
+@import "css/button.css" layer(components);
+@import "css/code.css" layer(components);
+@import "css/comments.css" layer(components);
+@import "css/empty-state.css" layer(components);
+@import "css/footer.css" layer(components);
+@import "css/footnotes.css" layer(components);
+@import "css/icon.css" layer(components);
+@import "css/navbar.css" layer(components);
+@import "css/page.css" layer(components);
+@import "css/pagination.css" layer(components);
+@import "css/post-list.css" layer(components);
+@import "css/post.css" layer(components);
+@import "css/toc.css" layer(components);
+
+@layer components {
+  /** pagefind */
+}
+
+body {
+  display: grid;
+  grid-template-columns: 0 minmax(0, 45em) 0;
+  grid-template-rows: auto 1fr;
+  column-gap: 7vw;
+  row-gap: var(--row-gap-medium);
+  justify-content: space-between;
+  min-height: 100dvh;
+
+  > * {
+    grid-column: 2;
+  }
+
+  > .navbar {
+    grid-column: 1 / -1;
+  }
+
+  /* Pagefind */
+  --pf-text: var(--color-text);
+  --pf-background: var(--color-highlight);
+}

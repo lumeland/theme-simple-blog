@@ -1,0 +1,7 @@
+.emptyState {
+  font: var(--font-body);
+  color: var(--color-dim);
+  padding: 2em;
+  background-color: var(--color-highlight);
+  border-radius: var(--border-radius);
+}

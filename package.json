@@ -1,0 +1,53 @@
+{
+  "name": "@lumeland/theme-simple-blog",
+  "version": "1.0.0-beta-2",
+  "description": "Lume theme to create a blog",
+  "author": "Óscar Otero",
+  "license": "MIT",
+  "files": [
+    "build",
+    "CHANGELOG.md",
+    "theme.json"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./mod.ts"
+  },
+  "scripts": {
+    "build": "rm -rf build && tsc -p . && cp -r src build",
+    "fmt": "oxfmt ."
+  },
+  "dependencies": {
+    "@lumeland/cms": "^1.0.0-beta-3",
+    "@lumeland/plugin-base-path": "workspace:^",
+    "@lumeland/plugin-cms": "workspace:^",
+    "@lumeland/plugin-date": "workspace:^",
+    "@lumeland/plugin-feed": "workspace:^",
+    "@lumeland/plugin-lightningcss": "workspace:^",
+    "@lumeland/plugin-metas": "workspace:^",
+    "@lumeland/plugin-pagefind": "workspace:^",
+    "@lumeland/plugin-prism": "workspace:^",
+    "@lumeland/plugin-reading-info": "workspace:^",
+    "@lumeland/plugin-resolve-urls": "workspace:^",
+    "@lumeland/plugin-sitemap": "workspace:^",
+    "@lumeland/plugin-slugify-urls": "workspace:^",
+    "@lumeland/plugin-terser": "workspace:^",
+    "@mdit/plugin-alert": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "oxfmt": "^0.74.0",
+    "typescript": "^7.0.2"
+  },
+  "peerDependencies": {
+    "@lumeland/core": "workspace:^"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.14.0",
+      "onFail": "download"
+    }
+  },
+  "packageManager": "pnpm@12.14.0"
+}
