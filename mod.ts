@@ -96,7 +96,7 @@ export default function (userOptions?: Options) {
 
 export const setup: Archetype = async function* () {
   const specifier = import.meta.resolve("./src");
-  const patterns = ["/_data.yml", "/404.md", "/favicon.png", "/posts/*.md"];
+  const patterns = ["/_data.yml", "/404.md", "/favicon.png", "/posts/*.md", "/pages/*.md"];
 
   for (const [path, url] of await getFiles(specifier, patterns)) {
     yield {
