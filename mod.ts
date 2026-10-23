@@ -59,11 +59,13 @@ export default function (userOptions?: Options) {
       // .use(footnotes())
       .use(resolveUrls())
       .use(slugifyUrls())
-      .use(pagefind({
-        componentUI: {
-          placeholder: "/** pagefind */"
-        }
-      }))
+      .use(
+        pagefind({
+          componentUI: {
+            placeholder: "/** pagefind */",
+          },
+        }),
+      )
       .use(terser())
       .use(lightningcss())
       .use(sitemap())
@@ -92,7 +94,7 @@ export default function (userOptions?: Options) {
   };
 }
 
-export const setup: Archetype = async function * () {
+export const setup: Archetype = async function* () {
   const specifier = import.meta.resolve("./src");
   const patterns = ["/_data.yml", "/404.md", "/favicon.png", "/posts/*.md"];
 
@@ -101,6 +103,6 @@ export const setup: Archetype = async function * () {
       path,
       overwrite: true,
       content: new URL(url),
-    }
+    };
   }
-}
+};

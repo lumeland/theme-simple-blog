@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  gap: .5em;
+  gap: 0.5em;
   color: var(--color-dim);
 
   a {

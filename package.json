@@ -2,8 +2,8 @@
   "name": "@lumeland/theme-simple-blog",
   "version": "1.0.0-beta-2",
   "description": "Lume theme to create a blog",
-  "author": "Óscar Otero",
   "license": "MIT",
+  "author": "Óscar Otero",
   "files": [
     "build",
     "CHANGELOG.md",

@@ -7,7 +7,11 @@
     margin-top: 0;
   }
 
-  & h2, & h3, & h4, & h5, & h6 {
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
     color: var(--color-base);
     margin: 1.5em 0 0.5em 0;
     text-wrap: balance;
@@ -28,7 +32,11 @@
     padding-bottom: 0.2em;
   }
 
-  h1, h2, :not(pre) > code, b, strong {
+  h1,
+  h2,
+  :not(pre) > code,
+  b,
+  strong {
     color: var(--color-base);
   }
 
@@ -43,7 +51,8 @@
     background: var(--color-highlight);
     color: var(--color-base);
   }
-  th, td {
+  th,
+  td {
     padding: 0.2em 1em;
     border-top: solid 1px var(--color-line);
     border-bottom: solid 1px var(--color-line);
