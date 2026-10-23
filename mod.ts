@@ -14,11 +14,10 @@ import feed, { type Options as FeedOptions } from "@lumeland/plugin-feed";
 import readingInfo from "@lumeland/plugin-reading-info";
 import { merge } from "@lumeland/core/utils/object.ts";
 import toc from "@lumeland/plugin-toc";
+import markdownFootnotes from "@lumeland/plugin-markdown-footnotes";
 import lumeCms from "@lumeland/plugin-cms";
 import cms from "./cms.ts";
 
-// import image from "https://deno.land/x/lume_markdown_plugins@v0.9.0/image.ts";
-// import footnotes from "https://deno.land/x/lume_markdown_plugins@v0.9.0/footnotes.ts";
 import { alert } from "@mdit/plugin-alert";
 
 export interface Options {
@@ -38,6 +37,7 @@ export const defaults: Options = {
     },
     items: {
       title: "=title",
+      image: "$ img attr(src)",
     },
   },
 };
@@ -55,8 +55,7 @@ export default function (userOptions?: Options) {
       .use(date(options.date))
       .use(metas())
       .use(lumeCms({ cms }))
-      // .use(image())
-      // .use(footnotes())
+      .use(markdownFootnotes())
       .use(resolveUrls())
       .use(slugifyUrls())
       .use(

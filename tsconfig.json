@@ -12,5 +12,5 @@
     "rootDir": ".",
     "declaration": true
   },
-  "exclude": ["tests", "build"]
+  "exclude": ["build", "_cache", "_site", "_config.ts"]
 }

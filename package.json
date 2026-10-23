@@ -1,6 +1,6 @@
 {
   "name": "@lumeland/theme-simple-blog",
-  "version": "1.0.0-beta-3",
+  "version": "1.0.0-beta-4",
   "description": "Lume theme to create a blog",
   "license": "MIT",
   "author": "Óscar Otero",
@@ -14,7 +14,6 @@
     ".": "./mod.ts"
   },
   "scripts": {
-    "test": "lume build -s",
     "build": "rm -rf build && tsc -p . && cp -r src build",
     "fmt": "oxfmt ."
   },
@@ -25,6 +24,7 @@
     "@lumeland/plugin-date": "workspace:^",
     "@lumeland/plugin-feed": "workspace:^",
     "@lumeland/plugin-lightningcss": "workspace:^",
+    "@lumeland/plugin-markdown-footnotes": "workspace:^",
     "@lumeland/plugin-metas": "workspace:^",
     "@lumeland/plugin-pagefind": "workspace:^",
     "@lumeland/plugin-prism": "workspace:^",

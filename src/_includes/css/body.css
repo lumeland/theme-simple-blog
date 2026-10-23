@@ -102,8 +102,7 @@
     padding: 0.2em;
     margin: 0 0.1em;
     line-height: 1;
-    background: var(--color-highlight);
-    border: solid 1px var(--color-highlight);
+    border: solid 1px var(--color-background);
 
     &:hover {
       border-color: var(--color-primary);

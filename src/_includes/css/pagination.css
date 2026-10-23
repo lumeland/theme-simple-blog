@@ -1,5 +1,5 @@
 .pagination {
-  & ul {
+  ul {
     list-style: none;
     padding: 0;
     display: grid;
@@ -11,7 +11,7 @@
     }
   }
 
-  & a {
+  a {
     display: block;
     text-decoration: none;
     color: var(--color-dim);
@@ -21,7 +21,7 @@
     }
   }
 
-  & strong {
+  strong {
     color: var(--color-base);
     display: block;
   }
@@ -44,7 +44,7 @@
 
 @media only screen and (max-width: 576px) {
   .pagination {
-    & strong {
+    strong {
       display: none;
     }
   }

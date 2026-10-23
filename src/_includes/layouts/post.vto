@@ -66,26 +66,29 @@ bodyClass: body-post
   {{ /if }}
 </article>
 
-<nav class="page-pagination pagination">
-  <ul>
-    {{- set previousPost = search.previousPage(url, "type=post") }}
-    {{- if previousPost }}
-    <li class="pagination-prev">
-      <a href="{{ previousPost.url }}" rel="prev">
-        <span>{{ i18n.nav.previous_post }}</span>
-        <strong>{{ previousPost.title }}</strong>
-      </a>
-    </li>
-    {{ /if }}
+{{- set previousPost = search.previousPage(url, "type=post") }}
+{{- set nextPost = search.nextPage(url, "type=post") }}
 
-    {{- set nextPost = search.nextPage(url, "type=post") }}
-    {{- if nextPost }}
-    <li class="pagination-next">
-      <a href="{{ nextPost.url }}" rel="next">
-        <span>{{ i18n.nav.next_post }}</span>
-        <strong>{{ nextPost.title }}</strong>
-      </a>
-    </li>
-    {{ /if }}
-  </ul>
-</nav>
+{{ if previousPost || nextPost }}  
+  <nav class="page-pagination pagination">
+    <ul>
+      {{- if previousPost }}
+      <li class="pagination-prev">
+        <a href="{{ previousPost.url }}" rel="prev">
+          <span>{{ i18n.nav.previous_post }}</span>
+          <strong>{{ previousPost.title }}</strong>
+        </a>
+      </li>
+      {{ /if }}
+
+      {{- if nextPost }}
+      <li class="pagination-next">
+        <a href="{{ nextPost.url }}" rel="next">
+          <span>{{ i18n.nav.next_post }}</span>
+          <strong>{{ nextPost.title }}</strong>
+        </a>
+      </li>
+      {{ /if }}
+    </ul>
+  </nav>
+{{ /if }}
