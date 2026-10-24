@@ -36,7 +36,7 @@
   --font-family-display: var(--font-family-ui);
   --font-bold: 600;
 
-  --font-code: 0.9em/1.5 var(--font-family-code);
+  --font-code: 0.95em/1.5 var(--font-family-code);
   --font-display: var(--font-bold) clamp(2rem, 10vw, 4rem)/1 var(--font-family-display);
   --font-display-spacing: -0.02em;
   --font-title: var(--font-bold) clamp(1.5rem, 8vw, 2rem)/1.2 var(--font-family-ui);
