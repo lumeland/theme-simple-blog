@@ -92,7 +92,6 @@ export default function (userOptions?: Options) {
 }
 
 export const setup: Lume.Archetype = function* () {
-  console.log([import.meta.resolve("./src")]);
   yield {
     url: import.meta.resolve("./src"),
     files: ["/_data.yml", "/404.md", "/favicon.png", "/posts/*.md", "/pages/*.md"],
