@@ -1,3 +1,5 @@
 node_modules
 _cache
 _site
+build
+package

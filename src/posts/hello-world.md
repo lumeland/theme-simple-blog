@@ -1,6 +1,6 @@
 ---
 title: Hello world
-date: "2022-06-12T00:00:00.000Z"
+date: 2022-06-12
 author: Óscar Otero
 tags:
   - Instructions
@@ -8,7 +8,7 @@ draft: false
 comments: {}
 ---
 
-**Simple blog** is a clean and minimal blog theme for Lume[^1], with support for
+**Simple blog** is a clean and minimal blog theme for Lume[^1] with support for
 tags and authors. It allows you to build your own blog **in seconds**, and
 provides Atom and JSON feeds for your subscribers.
 

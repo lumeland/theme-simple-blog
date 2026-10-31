@@ -11,23 +11,7 @@ bodyClass: body-post
 
   <nav toc="content" class="toc">
     <h2>{{ i18n.nav.toc }}</h2>
-    <ol>
-      {{ for item of toc }}
-      <li>
-        <a href="#{{ item.slug }}">{{ item.text }}</a>
 
-        {{ if item.children.length }}
-        <ul>
-          {{ for child of item.children }}
-          <li>
-            <a href="#{{ child.slug }}">{{ child.text }}</a>
-          </li>
-          {{ /for }}
-        </ul>
-        {{ /if }}
-      </li>
-      {{ /for }}
-    </ol>
   </nav>
 
   <div id="content" class="post-body body">

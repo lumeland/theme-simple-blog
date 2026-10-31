@@ -1,5 +1,3 @@
-import { getFiles } from "@lumeland/core/utils/cdn.ts";
-import type { Archetype } from "@lumeland/core/archetypes.ts";
 import date, { type Options as DateOptions } from "@lumeland/plugin-date";
 import lightningcss from "@lumeland/plugin-lightningcss";
 import terser from "@lumeland/plugin-terser";
@@ -85,7 +83,7 @@ export default function (userOptions?: Options) {
     site.hooks.addMarkdownItPlugin(alert);
 
     // Mastodon comment system
-    site.remoteFile("/js/comments.js", "npm:@oom/mastodon-comments@0.3.2/src/comments.js");
+    site.remote("/js/comments.js", "npm:@oom/mastodon-comments@0.3.2/src/comments.js");
 
     // Remote files
     const files = ["_includes/**", "_data/**", "**/_data.yml", "js/**", "*.{md,js,vto,css,png}"];
@@ -93,15 +91,15 @@ export default function (userOptions?: Options) {
   };
 }
 
-export const setup: Archetype = async function* () {
-  const specifier = import.meta.resolve("./src");
-  const patterns = ["/_data.yml", "/404.md", "/favicon.png", "/posts/*.md", "/pages/*.md"];
+export const setup: Lume.Archetype = function* () {
+  console.log([import.meta.resolve("./src")]);
+  yield {
+    url: import.meta.resolve("./src"),
+    files: ["/_data.yml", "/404.md", "/favicon.png", "/posts/*.md", "/pages/*.md"],
+  };
 
-  for (const [path, url] of await getFiles(specifier, patterns)) {
-    yield {
-      path,
-      overwrite: true,
-      content: new URL(url),
-    };
-  }
+  yield {
+    path: "/uploads/.gitkeep",
+    content: "",
+  };
 };

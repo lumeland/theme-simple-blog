@@ -29,9 +29,9 @@ cms.document({
   previewUrl: () => "/",
   fields: [
     {
+      label: "Language",
       name: "lang",
       type: "text",
-      label: "Language",
     },
     {
       name: "home",
@@ -46,6 +46,8 @@ cms.document({
       ],
     },
     {
+      label: "Extra link",
+      description: "Additional links to include in the main menu",
       name: "menu_links",
       type: "object-list",
       fields: [
@@ -62,9 +64,10 @@ cms.document({
       ],
     },
     {
+      label: "Extra HEAD",
       name: "extra_head",
       type: "code",
-      description: "Extra content to include in the <head> tag",
+      description: "Extra content to include in the HEAD of all pages",
     },
     {
       name: "metas",
@@ -125,9 +128,10 @@ cms.collection("posts: Blog posts", "src:posts/**/*.md", [
     ],
   },
   {
+    label: "Extra HEAD",
     name: "extra_head",
     type: "code",
-    description: "Extra content to include in the <head> tag",
+    description: "Extra content to include in the HEAD of ths post",
   },
   {
     name: "content",
@@ -166,9 +170,10 @@ cms.collection("pages: Additional pages, like about, contact, etc.", "src:pages/
     ],
   },
   {
+    label: "Extra HEAD",
     name: "extra_head",
     type: "code",
-    description: "Extra content to include in the <head> tag",
+    description: "Extra content to include in the HEAD of this page",
   },
   {
     name: "content",

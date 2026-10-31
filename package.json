@@ -1,49 +1,49 @@
 {
   "name": "@lumeland/theme-simple-blog",
-  "version": "1.0.0-beta-4",
+  "version": "2.0.0",
   "description": "Lume theme to create a blog",
   "license": "MIT",
   "author": "Óscar Otero",
   "files": [
     "build",
-    "CHANGELOG.md",
-    "theme.json"
+    "CHANGELOG.md"
   ],
   "type": "module",
   "exports": {
     ".": "./mod.ts"
   },
   "scripts": {
-    "build": "rm -rf build && tsc -p . && cp -r src build",
+    "start": "lume build -s",
+    "build": "rm -rf package && tsc -p . && cp -r src build && pnpm pack --out=package.tgz && rm -rf build && tar -xzf package.tgz && rm package.tgz && node build.ts && oxfmt package/*",
     "fmt": "oxfmt ."
   },
   "dependencies": {
-    "@lumeland/cms": "^1.0.0-beta-3",
-    "@lumeland/plugin-base-path": "workspace:^",
-    "@lumeland/plugin-cms": "workspace:^",
-    "@lumeland/plugin-date": "workspace:^",
-    "@lumeland/plugin-feed": "workspace:^",
-    "@lumeland/plugin-lightningcss": "workspace:^",
-    "@lumeland/plugin-markdown-footnotes": "workspace:^",
-    "@lumeland/plugin-metas": "workspace:^",
-    "@lumeland/plugin-pagefind": "workspace:^",
-    "@lumeland/plugin-prism": "workspace:^",
-    "@lumeland/plugin-reading-info": "workspace:^",
-    "@lumeland/plugin-resolve-urls": "workspace:^",
-    "@lumeland/plugin-sitemap": "workspace:^",
-    "@lumeland/plugin-slugify-urls": "workspace:^",
-    "@lumeland/plugin-terser": "workspace:^",
-    "@lumeland/plugin-toc": "workspace:^",
-    "@mdit/plugin-alert": "^2.0.2"
+    "@lumeland/cms": "^1.0.0",
+    "@lumeland/plugin-base-path": "^1.0.0",
+    "@lumeland/plugin-cms": "^1.0.0",
+    "@lumeland/plugin-date": "^1.0.0",
+    "@lumeland/plugin-feed": "^1.0.0",
+    "@lumeland/plugin-lightningcss": "^1.0.0",
+    "@lumeland/plugin-markdown-footnotes": "^1.0.1",
+    "@lumeland/plugin-metas": "^1.0.0",
+    "@lumeland/plugin-pagefind": "^1.0.0",
+    "@lumeland/plugin-prism": "^1.0.0",
+    "@lumeland/plugin-reading-info": "^1.0.0",
+    "@lumeland/plugin-resolve-urls": "^1.0.0",
+    "@lumeland/plugin-sitemap": "^1.0.0",
+    "@lumeland/plugin-slugify-urls": "^1.0.0",
+    "@lumeland/plugin-terser": "^1.0.0",
+    "@lumeland/plugin-toc": "^1.0.0",
+    "@mdit/plugin-alert": "^2.0.3"
   },
   "devDependencies": {
-    "@lumeland/lume": "workspace:^",
-    "@types/node": "^26.6.5",
-    "oxfmt": "^0.74.0",
+    "@lumeland/lume": "^4.0.0",
+    "@types/node": "^26.6.6",
+    "oxfmt": "^0.75.0",
     "typescript": "^7.0.2"
   },
   "peerDependencies": {
-    "@lumeland/core": "workspace:^"
+    "@lumeland/core": "^1.0.1"
   },
   "devEngines": {
     "packageManager": {
