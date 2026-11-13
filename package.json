@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "lume build -s",
-    "build": "rm -rf package && tsc -p . && cp -r src build && pnpm pack --out=package.tgz && rm -rf build && tar -xzf package.tgz && rm package.tgz && node build.ts && oxfmt package/*",
+    "build": "rm -rf package && tsc -p . && cp -r src build && pnpm pack --out=package.tgz && rm -rf build && tar -xzf package.tgz && rm package.tgz && node build.js && oxfmt package/*",
     "fmt": "oxfmt ."
   },
   "dependencies": {

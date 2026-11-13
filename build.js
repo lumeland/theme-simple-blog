@@ -3,7 +3,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 const pkg = JSON.parse(readFileSync("./package/package.json", "utf-8"));
 
 // Generate the exports entries (support for .js and .ts)
-const exports = pkg.exports as Record<string, string>;
+const exports = pkg.exports;
 
 for (const [key, value] of Object.entries(exports)) {
   const jsKey = key.replace(/\.ts$/, ".js");
